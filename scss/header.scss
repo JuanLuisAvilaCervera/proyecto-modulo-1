@@ -1,0 +1,19 @@
+header{
+    width: 100%;
+    background-color: #FFF;
+    justify-items: space-between;
+
+    box-shadow: 0px 3px 6px 0px #0000004A;
+
+
+    nav{
+        text-align: end;
+    }
+
+    div,nav{
+        margin: 2%;
+        width: 45%;
+        display: inline-block;
+    }
+}
+
