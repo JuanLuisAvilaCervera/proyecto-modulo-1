@@ -33,222 +33,6 @@ main button {
   text-decoration-skip-ink: none;
   color: #fff;
 }
-main #open {
-  padding-top: 100px;
-  height: 600px;
-  background-image: url("../img/bgi-open-section.png");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: auto 0;
-}
-main #open * {
-  margin-bottom: 30px;
-}
-main #open h2 {
-  font-family: Raleway;
-  font-size: 35px;
-  font-weight: 400;
-  line-height: 41.09px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-main #open p {
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 23px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  text-align: center;
-  padding: 0 15%;
-}
-main #open button {
-  background-color: var(--app-blue);
-}
-main #popular .circle {
-  width: 62.71px;
-  height: 62.71px;
-  border-radius: 100%;
-  position: relative;
-  left: calc(50% - 31px);
-}
-main #popular .one {
-  background-color: var(--app-blue);
-}
-main #popular .two {
-  background-color: var(--app-blue);
-}
-main #popular .three {
-  background-color: var(--app-blue);
-}
-main #popular h2 {
-  font-family: Raleway;
-  font-size: 20px;
-  line-height: 25px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-bottom: 20px;
-}
-main #popular h5 {
-  font-family: Raleway;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 24px;
-  letter-spacing: 5.9600000381px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-bottom: 20px;
-}
-main #popular p {
-  font-family: Raleway;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-bottom: 20px;
-  color: var(--app-grey);
-}
-main #benefits {
-  background-color: #F7F7F7;
-  padding: 30px 0;
-}
-main #benefits article, main #benefits #green-div {
-  background-color: #fff;
-  margin: 25px;
-  border: 1px solid #E8E9ED;
-  border-radius: 5px;
-  padding: 25px;
-  text-align: start;
-}
-main #benefits article img, main #benefits #green-div img {
-  position: relative;
-  width: 70%;
-  height: auto;
-  left: 15%;
-  margin-bottom: 20px;
-}
-main #benefits article h3, main #benefits #green-div h3 {
-  font-family: Raleway;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 35.22px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-bottom: 20px;
-}
-main #benefits article p, main #benefits #green-div p {
-  font-family: Open Sans;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 21px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-main #benefits #green-card {
-  margin: 0;
-  border: none;
-  background-color: #F7F7F7;
-}
-main #benefits #green-card #green {
-  background-color: green;
-  padding: 30px;
-  border-radius: 5px;
-}
-main #benefits #green-card #green-div {
-  margin: 0;
-}
-main #contact {
-  padding: 30px;
-}
-main #contact h2 {
-  font-family: Raleway;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 46.96px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-main #contact h5 {
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-bottom: 30px;
-}
-main #contact p {
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: var(--app-grey);
-}
-main #contact ul {
-  list-style-type: none;
-  text-align: start;
-  margin-bottom: 30px;
-}
-main #contact ul li * {
-  display: inline-block;
-}
-main #contact form {
-  text-align: start;
-}
-main #contact form label {
-  color: var(--app-blue);
-  font-family: Open Sans;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 14.98px;
-  letter-spacing: 3.2799999714px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-main #contact form input[type=text] {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  border-bottom: var(--app-grey) solid 1px;
-}
-main #contact #consent-div {
-  margin-top: 30px;
-}
-main #contact #consent-div * {
-  display: inline-block;
-}
-main #contact #consent-div #input-div {
-  top: 0;
-  position: relative;
-}
-main #contact #consent-div label {
-  width: 80%;
-}
-main #contact #consent-div label p {
-  font-size: 11px;
-}
-main #contact button {
-  width: 226px;
-  height: 57px;
-  position: relative;
-  right: 0;
-  background-color: var(--app-blue);
-}
 
 footer {
   box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
@@ -271,9 +55,381 @@ footer #media {
   text-align: end;
 }
 
+#open {
+  padding-top: 100px;
+  height: 600px;
+  background-image: url("../img/bgi-open-section.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: auto 0;
+}
+#open * {
+  margin-bottom: 30px;
+}
+#open h2 {
+  font-family: Raleway;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 41.09px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+#open p {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  padding: 0 15%;
+}
+#open button {
+  background-color: var(--app-blue);
+}
+
+#popular .data-icon img {
+  margin-top: 5px;
+  position: absolute;
+  z-index: 3;
+}
+#popular .data-icon #eye {
+  margin-top: 15px;
+}
+#popular .circle {
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 100%;
+  position: relative;
+  left: calc(50% - 31px);
+}
+#popular .one {
+  background-color: var(--app-red);
+}
+#popular .two {
+  background-color: var(--app-blue);
+}
+#popular .three {
+  background-color: var(--app-green);
+}
+#popular h2 {
+  font-family: Raleway;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 20px;
+}
+#popular h5 {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 5.9600000381px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 20px;
+}
+#popular p {
+  font-family: Raleway;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 20px;
+  color: var(--app-grey);
+}
+
+#benefits {
+  background-color: #F7F7F7;
+  padding: 30px 0;
+}
+#benefits #red-frame {
+  width: 127px;
+  position: absolute;
+  padding: 0;
+  margin: -30px 0 0 120px;
+}
+#benefits article {
+  background-color: #fff;
+  margin: 25px;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  padding: 25px;
+  text-align: start;
+}
+#benefits article #blue-circle {
+  background-color: var(--app-blue);
+  border-radius: 100%;
+  width: 131px;
+  height: 131px;
+  position: absolute;
+  left: calc(50% - 65px);
+}
+#benefits article img {
+  position: relative;
+  width: 70%;
+  height: auto;
+  left: 15%;
+  margin-bottom: 20px;
+}
+#benefits article h3 {
+  font-family: Raleway;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35.22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 20px;
+}
+#benefits article p {
+  font-family: Open Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+#benefits #green-card {
+  margin: 0;
+  border: none;
+  background-color: #F7F7F7;
+}
+#benefits #green-card #green {
+  background-color: var(--app-green);
+  padding: 30px 30px 0 30px;
+  border-radius: 5px;
+  margin: 0;
+}
+#benefits #green-card #green img {
+  width: 100%;
+  margin: 0;
+  position: static;
+}
+#benefits #green-card #green-div {
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  padding: 25px;
+  text-align: start;
+}
+
+#pricing {
+  padding: 60px 25px;
+}
+#pricing h2 {
+  font-family: Raleway;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42.26px;
+  margin-bottom: 20px;
+}
+#pricing article {
+  background-color: #fff;
+  border-radius: 18px;
+  border: 2px solid;
+  padding-top: 60px;
+  margin-bottom: 50px;
+}
+#pricing article div {
+  display: inline-block;
+  position: relative;
+  width: 40%;
+  vertical-align: middle;
+}
+#pricing article .pricing-price p {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.48px;
+}
+#pricing article .pricing-price .pricing-dollars {
+  font-family: Open Sans;
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 62px;
+}
+#pricing article .pricing-price .limited {
+  font-family: Raleway;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.09px;
+}
+#pricing article .pricing-benefits {
+  vertical-align: center;
+  width: 50%;
+}
+#pricing article .pricing-benefits ul {
+  list-style-type: none;
+}
+#pricing article .pricing-benefits ul li {
+  text-align: start;
+  margin-bottom: 10px;
+}
+#pricing article .pricing-benefits ul li * {
+  display: inline-block;
+  margin: 0 3px;
+}
+#pricing article .pricing-benefits ul li p {
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.07px;
+  text-align: center;
+}
+#pricing article .begin {
+  width: 150px;
+  height: 50px;
+  position: relative;
+  top: 30px;
+}
+#pricing article:hover {
+  box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
+  position: relative;
+  transform: scale(1.1);
+  transition: 0.2s ease-out, 0.2s ease-in;
+}
+#pricing #basic {
+  border-color: var(--app-red);
+}
+#pricing #basic button {
+  background-color: var(--app-red);
+}
+#pricing #basic .pricing-dollars {
+  color: var(--app-red);
+}
+#pricing #professional {
+  border-color: var(--app-blue);
+}
+#pricing #professional button {
+  background-color: var(--app-blue);
+}
+#pricing #professional .pricing-dollars {
+  color: var(--app-blue);
+}
+#pricing #premium {
+  border-color: var(--app-green);
+}
+#pricing #premium button {
+  background-color: var(--app-green);
+}
+#pricing #premium .pricing-dollars {
+  color: var(--app-green);
+}
+
+#contact {
+  padding: 30px;
+}
+#contact h2 {
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46.96px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+#contact h5 {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 30px;
+}
+#contact p {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: var(--app-grey);
+}
+#contact ul {
+  list-style-type: none;
+  text-align: start;
+  margin-bottom: 30px;
+}
+#contact ul li * {
+  display: inline-block;
+}
+#contact ul li ion-icon {
+  color: var(--app-blue);
+}
+#contact form {
+  text-align: start;
+}
+#contact form label {
+  color: var(--app-blue);
+  font-family: Open Sans;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14.98px;
+  letter-spacing: 3.2799999714px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+#contact form input[type=text] {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: var(--app-grey) solid 1px;
+}
+#contact form input[type=checkbox] {
+  width: 24px;
+  height: 24px;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+#contact form input[type=checkbox]:after {
+  border: var(--app-blue) 1px solid;
+}
+#contact #consent-div {
+  margin-top: 30px;
+}
+#contact #consent-div * {
+  display: inline-block;
+  vertical-align: top;
+}
+#contact #consent-div #input-div {
+  top: 0;
+  position: relative;
+}
+#contact #consent-div label {
+  width: 80%;
+}
+#contact #consent-div label p {
+  font-size: 12px;
+  letter-spacing: normal;
+}
+#contact button {
+  width: 226px;
+  height: 57px;
+  position: relative;
+  margin-left: 100px;
+  background-color: var(--app-blue);
+}
+
 :root {
   --app-blue: #08A6E4;
   --app-grey: #A5A5A5;
+  --app-green: #55DFB4;
+  --app-red: #EB476E;
 }
 
 * {

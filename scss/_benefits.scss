@@ -1,0 +1,99 @@
+#benefits{
+    background-color: #F7F7F7;
+
+    padding: 30px 0;
+
+    img{
+
+    }
+    #red-frame{
+        width: 127px;
+        position: absolute;
+        padding: 0;
+        margin: -30px 0 0 120px;
+    }
+    
+    article{
+        background-color: #fff;
+        margin: 25px;
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+        padding: 25px;
+        text-align: start;
+
+        
+
+        #blue-circle{
+            background-color: var(--app-blue);
+            border-radius: 100%;
+            width: 131px;
+            height: 131px;
+            position: absolute;
+            left: calc(50% - 65px);
+        }
+
+        img{
+            position: relative;
+            width: 70%;
+            height:auto;
+            left: 15%;
+            margin-bottom: 20px;
+        }
+
+        h3{
+            font-family: Raleway;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 35.22px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-family: Open Sans;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+        }
+
+        
+
+    }
+
+    #green-card{
+        margin: 0;
+        border: none;
+        background-color: #F7F7F7;
+
+        #green{
+            background-color: var(--app-green);
+            padding: 30px 30px 0 30px;
+            border-radius: 5px;
+            margin: 0;
+            
+            img{
+                width: 100%;
+                margin: 0;
+                position: static;
+            }
+        }
+
+        #green-div{
+            margin: 0;
+            background-color: #fff;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+            padding: 25px;
+            text-align: start;
+        }
+    }
+
+
+
+}

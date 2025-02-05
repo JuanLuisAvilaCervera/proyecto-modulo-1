@@ -2,9 +2,18 @@
 @import 'main';
 @import 'footer';
 
+//MAIN
+@import 'open';
+@import 'popular';
+@import 'benefits';
+@import 'pricing';
+@import 'contact';
+
 :root{
     --app-blue: #08A6E4;
     --app-grey: #A5A5A5;
+    --app-green: #55DFB4;
+    --app-red: #EB476E;
 
 }
 

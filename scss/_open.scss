@@ -1,0 +1,41 @@
+#open{
+
+    padding-top: 100px;
+    height: 600px;
+    background-image:url("../img/bgi-open-section.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: auto 0;
+
+    *{
+        margin-bottom: 30px;
+    }
+
+    h2{
+        font-family: Raleway;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 41.09px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+    }
+
+    p{
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        text-align: center;
+        padding: 0 15%;
+    }
+
+    button{
+        background-color: var(--app-blue);
+    }
+}
