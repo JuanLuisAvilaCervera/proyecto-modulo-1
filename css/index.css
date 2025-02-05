@@ -4,15 +4,69 @@ header {
   justify-items: space-between;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
 }
+header div {
+  width: 40%;
+  padding: 2%;
+}
 header nav {
+  width: 50%;
   text-align: end;
 }
 header div, header nav {
-  margin: 2%;
-  width: 45%;
+  margin: 0;
   display: inline-block;
 }
+header ul {
+  display: none;
+}
 
+@media only screen and (min-width: 1000px) {
+  header {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+  header ion-icon {
+    display: none !important;
+  }
+  header nav, header div {
+    width: 100%;
+  }
+  header div {
+    margin-left: 10%;
+  }
+  header nav {
+    margin-right: 10%;
+    height: 100% !important;
+    align-items: center;
+  }
+  header ul {
+    height: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) 10%;
+    justify-content: space-around;
+  }
+  header ul li {
+    display: grid !important;
+    text-align: center;
+    align-items: center;
+  }
+  header ul li a {
+    color: #A5A5A5;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 3.2799999714px;
+    text-align: center;
+    text-decoration: none;
+  }
+  header ul li:hover {
+    border-bottom: solid 3px var(--app-blue);
+  }
+  header ul li:hover a {
+    color: black;
+  }
+}
 main {
   text-align: center;
 }
@@ -44,17 +98,30 @@ footer h1 {
 footer p {
   font-size: 11px;
   color: #A5A5A5;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14.98px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 footer #copyright, footer #media {
   width: 55%;
   margin: 0 2%;
   display: inline-block;
+  vertical-align: middle;
 }
 footer #media {
   width: 35%;
   text-align: end;
 }
 
+@media only screen and (min-width: 1000px) {
+  footer {
+    padding: 0 137px;
+  }
+}
 #open {
   padding-top: 100px;
   height: 600px;
@@ -425,6 +492,14 @@ footer #media {
   background-color: var(--app-blue);
 }
 
+@media only screen and (min-width: 1000px) {
+  #contact {
+    padding: 5% 15%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
 :root {
   --app-blue: #08A6E4;
   --app-grey: #A5A5A5;
