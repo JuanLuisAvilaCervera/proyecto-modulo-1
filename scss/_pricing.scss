@@ -124,3 +124,29 @@
     }
 
 }
+
+@media only screen and (min-width: 1000px){
+    #pricing{
+        padding: 60px 15% !important;
+        display: grid !important;
+        grid-template: auto 3fr / 1fr 1fr 1fr;
+        column-gap: 25px;
+
+        h2{
+            grid-column: 2;
+            justify-self:center;
+        }
+
+        article{
+            grid-row: 2;
+            display: grid !important;
+            grid-gap: 50px;
+            text-align: center;
+            justify-content: center;
+
+            div{
+                width: 100% !important;
+            }
+        }
+    }
+}

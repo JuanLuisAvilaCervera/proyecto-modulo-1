@@ -1,13 +1,14 @@
+
+$circle-width: 131px;
+$frame-width: 127px;
+
 #benefits{
     background-color: #F7F7F7;
 
     padding: 30px 0;
 
-    img{
-
-    }
     #red-frame{
-        width: 127px;
+        width: $frame-width;
         position: absolute;
         padding: 0;
         margin: -30px 0 0 120px;
@@ -21,13 +22,35 @@
         padding: 25px;
         text-align: start;
 
+        .line{
+            margin-top: 25px;
+            height: 3px;
+            width: 75%;
+            display: none;
+        }
+
+        #first{
+            .line{
+                background-color: var(--app-red);
+            }
+        }
+        #shop{
+            .line{
+                background-color: var(--app-blue);
+            }
+        }
+        #green-div{
+            .line{
+                background-color: var(--app-green);
+            }
+        }
         
 
         #blue-circle{
             background-color: var(--app-blue);
             border-radius: 100%;
-            width: 131px;
-            height: 131px;
+            width: $circle-width;
+            height: $circle-width;
             position: absolute;
             left: calc(50% - 65px);
         }
@@ -96,4 +119,52 @@
 
 
 
+}
+
+@media only screen and (min-width: 1000px){
+    #benefits{
+        display: grid !important;
+        row-gap: 25px;
+
+        article{
+            margin: auto 15% !important;
+            display: grid !important;
+            grid-template-areas: "first second";
+            grid-template-columns: 1fr 1fr;
+
+            .line{
+                display: block !important;
+            }
+        }
+
+        #first,#phone,#green-div{
+            grid-area: first;
+        }
+
+        #mac,#shop,#green{
+            grid-area: second;
+        }
+
+        #blue-circle{
+            margin-top: 30px;
+            left: 25%!important;
+            transform: scale(1.5);
+        }
+
+        #red-frame{
+            left: auto;
+            content: url("../img/benefits-frame-desk.png");
+            right: 22% !important;
+            margin-top: 5px;
+            transform: scale(1.2);
+        }
+        #mac{
+            transform: scale(0.8);
+        }
+
+        #green-card{
+            column-gap: 30px;
+        }
+
+    }
 }

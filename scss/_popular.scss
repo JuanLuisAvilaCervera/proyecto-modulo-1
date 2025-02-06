@@ -18,6 +18,7 @@
         border-radius:100%;
         position: relative;
         left: calc(50% - 31px);
+        margin-bottom: 15px;
     }
 
     .one{
@@ -68,4 +69,30 @@
         color: var(--app-grey);
     }
 
+}
+
+@media only screen and (min-width: 1000px){
+    #popular{
+        padding: 0 15% 15% 15%!important;
+        display: grid !important;
+        grid-template: 3fr 3fr / 1fr 1fr 1fr;
+        column-gap: 25px;
+
+        h2{
+            font-family: Raleway;
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 42px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+            grid-row: 1;
+            grid-column: 1 / span 3;
+        }
+
+        .data{
+            grid-row: 2;
+        }
+    }
 }
