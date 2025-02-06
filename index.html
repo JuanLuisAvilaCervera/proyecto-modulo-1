@@ -22,8 +22,16 @@
 </head>
 <body>
     <header>
-        <div id="title"><h1 id="title">OXIGENShop</h1></div>
-        <nav><ion-icon name="menu-outline"></ion-icon></nav>
+        <div id="title"><h1 id="title">OXYGENShop</h1></div>
+        <nav>
+            <ion-icon name="menu-outline"></ion-icon>
+            <ul>
+                <li><a href="#open">WHY US?</a></li>
+                <li><a href="#benefits">BENEFITS</a></li>
+                <li><a href="#pricing">PRICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="open">
@@ -47,7 +55,6 @@
                     <img src="./img/popular-eye.png" alt="" id="eye">
                     <div class="circle two"></div>
                 </div>
-                <img src="" alt="">
                 <h5>2000000+</h5>
                 <p>seen products every day</p>
             </div>
@@ -56,30 +63,38 @@
                     <img src="./img/popular-catalog.png" alt="">
                     <div class="circle three"></div>
                 </div>
-                <img src="" alt="">
                 <h5>10000+</h5>
                 <p>added posts daily</p>
             </div>
         </section>
         <section id="benefits">
             <article>
-                <div>
+                <div id="macimg">
                     <img src="./img/benefits-frame.png" alt="" id="red-frame">
-                    <img src="./img/benefits-mac.png" alt="">
+                    <img src="./img/benefits-mac.png" alt="" id="mac">
                 </div>
-                <h3>Be always first</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibuu</p>
+                <div id="first">
+                    <h3>Be always first</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibuu</p>
+                    <div class="line"></div>
+                </div>
             </article>
             <article>
-                <div id="blue-circle"></div>
-                <img src="./img/benefits-phone.png" alt="">
-                <h3>Your shop is where you are!</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibu</p>
+                <div id="phone">
+                    <div id="blue-circle"></div>
+                    <img src="./img/benefits-phone.png" alt="">
+                </div>
+                <div id="shop">
+                    <h3>Your shop is where you are!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibu</p>
+                    <div class="line"></div>
+                </div>
             </article>
             <article id="green-card">
                 <div id="green-div">
                     <h3>Increase recognition your brand!</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibu</p>
+                    <div class="line"></div>
                 </div>
                 <div id="green">
                     <img src="./img/trumpet.png" alt="">
@@ -91,7 +106,7 @@
             <article id="basic">
                 <div class="pricing-price">
                     <p>Basic</p>
-                    <p class="pricing-dollars">$0</p>
+                    <p class="pricing-dollars">$25</p>
                 </div>
                 <div class="pricing-benefits">
                     <ul>
@@ -124,7 +139,7 @@
             <article id="premium">
                 <div class="pricing-price">
                     <p>Premium</p>
-                    <p class="pricing-dollars">$0</p>
+                    <p class="pricing-dollars">$60</p>
                     <p class="limited">Limited offer</p>
                 </div>
                 <div class="pricing-benefits">
@@ -140,18 +155,20 @@
             </article>
         </section>
         <section id="contact">
-            <h2>Any questions?</h2>
-            <h5>Leave your email address or call us!</h5>
-            <ul>
-                <li>
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <p>info@betshop.xyz</p>
-                </li>
-                <li>
-                    <ion-icon name="call-outline"></ion-icon>
-                    <p>info@betshop.xyz</p>
-                </li>
-            </ul>
+            <div>
+                <h2>Any questions?</h2>
+                <h5>Leave your email address or call us!</h5>
+                <ul>
+                    <li>
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <p>info@betshop.xyz</p>
+                    </li>
+                    <li>
+                        <ion-icon name="call-outline"></ion-icon>
+                        <p>info@betshop.xyz</p>
+                    </li>
+                </ul>
+            </div>
             <form action="">
                 <label for="name">NAME</label>
                 <input type="text" id="name">

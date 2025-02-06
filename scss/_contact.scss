@@ -127,3 +127,29 @@
     }
 
 }
+
+@media only screen and (min-width: 1000px){
+    #contact{
+        padding: 5% 15% !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+
+        ul{
+
+            li{
+                display: inline-block;
+            }
+        }
+        form{
+
+            display: grid;
+
+            button{
+                justify-self:end;
+            }
+        }
+        
+
+    }
+}
