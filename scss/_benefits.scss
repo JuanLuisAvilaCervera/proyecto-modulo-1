@@ -93,6 +93,7 @@ $frame-width: 127px;
         margin: 0;
         border: none;
         background-color: #F7F7F7;
+        
 
         #green{
             background-color: var(--app-green);
@@ -163,6 +164,7 @@ $frame-width: 127px;
         }
 
         #green-card{
+            padding: 0;
             column-gap: 30px;
         }
 
