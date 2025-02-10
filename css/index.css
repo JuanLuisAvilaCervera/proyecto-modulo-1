@@ -125,11 +125,11 @@ footer #media {
 #open {
   padding-top: 100px;
   height: 600px;
-  background-image: url("../img/bgi-open-section.png");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
   padding: auto 0;
+  margin-bottom: 10%;
+}
+#open img {
+  width: 100%;
 }
 #open * {
   margin-bottom: 30px;
@@ -160,8 +160,18 @@ footer #media {
 
 @media only screen and (min-width: 1000px) {
   #open {
-    background-image: url("../img/bgi-open-2.png") !important;
     height: 700px !important;
+  }
+  #open h2 {
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 57px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  #open img {
+    content: url(../img/bgi-open-2.png);
   }
 }
 #popular .data-icon img {
@@ -223,7 +233,7 @@ footer #media {
 
 @media only screen and (min-width: 1000px) {
   #popular {
-    padding: 0 15% 15% 15% !important;
+    padding: 0 15% 10% 15% !important;
     display: grid !important;
     grid-template: 3fr 3fr/1fr 1fr 1fr;
     column-gap: 25px;
@@ -371,11 +381,12 @@ footer #media {
     transform: scale(0.8);
   }
   #benefits #green-card {
+    padding: 0;
     column-gap: 30px;
   }
 }
 #pricing {
-  padding: 60px 25px;
+  padding: 60px 5%;
 }
 #pricing h2 {
   font-family: Raleway;
@@ -424,7 +435,7 @@ footer #media {
 }
 #pricing article .pricing-benefits ul li {
   text-align: start;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 #pricing article .pricing-benefits ul li * {
   display: inline-block;
@@ -442,12 +453,6 @@ footer #media {
   height: 50px;
   position: relative;
   top: 30px;
-}
-#pricing article:hover {
-  box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
-  position: relative;
-  transform: scale(1.1);
-  transition: 0.2s ease-out, 0.2s ease-in;
 }
 #pricing #basic {
   border-color: var(--app-red);
@@ -491,12 +496,18 @@ footer #media {
   #pricing article {
     grid-row: 2;
     display: grid !important;
-    grid-gap: 50px;
+    grid-gap: 30px;
     text-align: center;
     justify-content: center;
   }
   #pricing article div {
     width: 100% !important;
+  }
+  #pricing article:hover {
+    box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
+    position: relative;
+    transform: scale(1.1);
+    transition: 0.2s ease-out, 0.2s ease-in;
   }
 }
 #contact {
@@ -593,7 +604,6 @@ footer #media {
   width: 226px;
   height: 57px;
   position: relative;
-  margin-left: 100px;
   background-color: var(--app-blue);
 }
 

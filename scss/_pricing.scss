@@ -1,6 +1,6 @@
 #pricing{
 
-    padding: 60px 25px;
+    padding: 60px 5%;
 
     h2{
         font-family: Raleway;
@@ -60,7 +60,7 @@
                 list-style-type: none;
                 li{
                     text-align: start;
-                    margin-bottom: 10px;
+                    margin-bottom: 25px;
 
                     *{
                         display:inline-block;
@@ -86,12 +86,7 @@
 
     }
 
-    article:hover{
-        box-shadow: 5px 10px 27px 0px #07ACE64A;
-        position: relative;
-        transform: scale(1.1);
-        transition: 0.2s ease-out, 0.2s ease-in;
-    }
+    
 
     #basic{
         border-color: var(--app-red);
@@ -140,13 +135,20 @@
         article{
             grid-row: 2;
             display: grid !important;
-            grid-gap: 50px;
+            grid-gap: 30px;
             text-align: center;
             justify-content: center;
 
             div{
                 width: 100% !important;
             }
+        }
+
+        article:hover{
+            box-shadow: 5px 10px 27px 0px #07ACE64A;
+            position: relative;
+            transform: scale(1.1);
+            transition: 0.2s ease-out, 0.2s ease-in;
         }
     }
 }
