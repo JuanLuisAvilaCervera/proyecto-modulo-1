@@ -124,14 +124,9 @@ footer #media {
 }
 #open {
   padding-top: 100px;
-  padding: auto 0;
-  margin-bottom: 5%;
 }
 #open img {
   width: 100%;
-}
-#open * {
-  margin-bottom: 30px;
 }
 #open h2 {
   font-family: Raleway;
@@ -159,9 +154,6 @@ footer #media {
 }
 
 @media only screen and (min-width: 1000px) {
-  #open {
-    height: 700px !important;
-  }
   #open h2 {
     font-family: Raleway;
     font-weight: 400;
