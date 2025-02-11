@@ -128,6 +128,9 @@ footer #media {
 #open img {
   width: 100%;
 }
+#open h2, #open p, #open button {
+  margin-bottom: 30px;
+}
 #open h2 {
   font-family: Raleway;
   font-size: 35px;
