@@ -1,9 +1,8 @@
 #open{
 
     padding-top: 100px;
-    height: 600px;
     padding: auto 0;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     
     img{
         width: 100%;
@@ -37,6 +36,7 @@
     }
 
     button{
+        max-width: 250px;
         background-color: var(--app-blue);
     }
 }
