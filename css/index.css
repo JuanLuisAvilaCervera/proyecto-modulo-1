@@ -567,6 +567,8 @@ footer #media {
   background-color: transparent;
   border: none;
   border-bottom: var(--app-grey) solid 1px;
+  margin-bottom: 1.5rem;
+  height: 2rem;
 }
 #contact form input[type=checkbox] {
   width: 24px;

@@ -70,10 +70,13 @@
         }
 
         input[type=text]{
+            
             width: 100%;
             background-color: transparent;
             border: none;
             border-bottom: var(--app-grey) solid 1px;
+            margin-bottom: 1.5rem;
+            height: 2rem;
         }
 
         input[type=checkbox]{
