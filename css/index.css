@@ -18,6 +18,26 @@ header div, header nav {
 }
 header ul {
   display: none;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: space-around;
+}
+header ul li {
+  text-align: center;
+  align-items: center;
+}
+header ul li a {
+  color: #A5A5A5;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+  text-align: center;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 1000px) {
