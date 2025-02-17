@@ -2,9 +2,10 @@
 header{
     width: 100%;
     background-color: #FFF;
-    justify-items: space-between;
 
     box-shadow: 0px 3px 6px 0px #0000004A;
+
+    position: absolute;
 
 
     div{
@@ -24,7 +25,7 @@ header{
 
     ul{
         display:none;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template: repeat(4, 1fr) / 1fr;
         justify-content: space-around;
     
             li{
@@ -32,6 +33,10 @@ header{
                 // display: grid !important;
                 text-align: center;
                 align-items: center;
+                height: 2rem;
+                width: 100%;
+                list-style-type: none;
+                vertical-align: middle;
     
                 a{
                     color: #A5A5A5;
@@ -49,6 +54,9 @@ header{
                     justify-content: center;
                 }
 
+                :hover{
+                    color: black;
+                }
                 
             }
     }
@@ -57,6 +65,7 @@ header{
 @media only screen and (min-width: 1000px) {
 
     header{
+        height: auto !important;
         display: grid !important;
         
         grid-template-columns: 1fr 1fr;
@@ -80,16 +89,19 @@ header{
         }
     
         ul{
-            height: 100%;
+            margin-top: 0 !important;
+            height: 100% !important;
             display:grid !important;
-            grid-template-columns: repeat(4, 1fr) 10%;
+            grid-template: 1fr / repeat(4, 1fr) 10%;
             justify-content: space-around;
+            position: static !important;
     
             li{
                 
                 display: grid !important;
                 text-align: center;
                 align-items: center;
+                height: auto !important;
     
                 a{
                     color: #A5A5A5;

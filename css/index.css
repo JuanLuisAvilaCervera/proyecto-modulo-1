@@ -1,8 +1,8 @@
 header {
   width: 100%;
   background-color: #FFF;
-  justify-items: space-between;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
+  position: absolute;
 }
 header div {
   width: 40%;
@@ -18,12 +18,16 @@ header div, header nav {
 }
 header ul {
   display: none;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template: repeat(4, 1fr)/1fr;
   justify-content: space-around;
 }
 header ul li {
   text-align: center;
   align-items: center;
+  height: 2rem;
+  width: 100%;
+  list-style-type: none;
+  vertical-align: middle;
 }
 header ul li a {
   color: #A5A5A5;
@@ -39,9 +43,13 @@ header ul li a {
   align-items: center;
   justify-content: center;
 }
+header ul li :hover {
+  color: black;
+}
 
 @media only screen and (min-width: 1000px) {
   header {
+    height: auto !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr;
   }
@@ -60,15 +68,18 @@ header ul li a {
     align-items: center;
   }
   header ul {
-    height: 100%;
+    margin-top: 0 !important;
+    height: 100% !important;
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) 10%;
+    grid-template: 1fr/repeat(4, 1fr) 10%;
     justify-content: space-around;
+    position: static !important;
   }
   header ul li {
     display: grid !important;
     text-align: center;
     align-items: center;
+    height: auto !important;
   }
   header ul li a {
     color: #A5A5A5;
@@ -147,7 +158,7 @@ footer #media {
   }
 }
 #open {
-  padding-top: 100px;
+  padding-top: 15%;
 }
 #open img {
   width: 100%;
