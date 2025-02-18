@@ -685,6 +685,15 @@ footer #media {
   border: solid 3px var(--app-blue);
 }
 
+.error {
+  border: solid 3px red !important;
+  background-color: rgba(255, 0, 0, 0.4666666667) !important;
+}
+
+input[type=checkbox].error {
+  all: unset;
+}
+
 :root {
   --app-blue: #08A6E4;
   --app-grey: #A5A5A5;
