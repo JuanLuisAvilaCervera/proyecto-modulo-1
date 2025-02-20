@@ -1,23 +1,6 @@
 
 
 
-window.onload = () => {
-
-    const html = document.querySelector('html');
-    const body = document.querySelector('body')
-    const height = Math.max( body.scrollHeight, body.offsetHeight, 
-                        html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-    generateVerticalScroll( body);
-    generateBackToTopButton(body);
-
-    window.addEventListener('scroll', () =>{
-        adjustVerticalScroll( height);
-    })
-
-
-}
-
 function generateVerticalScroll( body ){
     const scrollable = document.createElement("div");
     scrollable.setAttribute("id", "scrollable");

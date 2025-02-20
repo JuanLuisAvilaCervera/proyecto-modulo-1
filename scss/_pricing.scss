@@ -11,6 +11,9 @@
 
     }
 
+    select{
+        margin-bottom: 2rem;
+    }
     article{
         background-color: #fff;
         border-radius: 18px;
@@ -124,16 +127,25 @@
     #pricing{
         padding: 60px 15% !important;
         display: grid !important;
-        grid-template: auto 3fr / 1fr 1fr 1fr;
+        grid-template: auto auto 3fr / 1fr 1fr 1fr;
         column-gap: 25px;
+        row-gap: 3rem;
 
         h2{
+            grid-row: 1;
             grid-column: 2;
             justify-self:center;
         }
 
-        article{
+        select{
+            height: 2rem;
             grid-row: 2;
+            grid-column: 2;
+            margin-bottom: 0;
+        }
+
+        article{
+            grid-row: 3;
             display: grid !important;
             grid-gap: 30px;
             text-align: center;
