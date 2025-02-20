@@ -25,6 +25,7 @@
     <script src="./js/scroll.js"></script>
     <script src="./js/formContact.js"></script>
     <script src="./js/pricing.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/index.js"></script>
 
 </head>
@@ -113,9 +114,9 @@
         <section id="pricing">
             <h2>Pricing</h2>
             <select name="price-selector" id="price-selector">
-                <option value="usd">USD</option>
-                <option value="eur">EUR</option>
-                <option value="gbp">GBP</option>
+                <option value="eur € right">EUR</option>
+                <option value="usd $ left">USD</option>
+                <option value="gbp &amp;#163; left">GBP</option>
             </select>
             <article id="basic">
                 <div class="pricing-price">
@@ -213,7 +214,19 @@
                 </button>
 
             </div>
+            <div class="modal" id="modal-subscribe">
+                <div class="modal-content">
+                    <button id="modal-close-button"></button>
+                    <h2>Subscribe to our newsletter!</h2>
+                    <div id="inputModalDiv">
+                        <label for="emailModal">Email: </label>
+                        <input type="email" id="emailModal">
+                    </div>
+                    <button id="modal-subscribe-button"></button>
+                </div>
+            </div>
         </section>
+        
     </main>
     <footer>
         <div id="copyright">

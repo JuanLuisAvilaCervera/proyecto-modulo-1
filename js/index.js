@@ -7,6 +7,7 @@ window.onload =  async () => {
     const burguer = document.getElementById("nav-burguer");
     const priceSelector = document.getElementById("price-selector");
 
+
     //TOGGLE NAV
     burguer.addEventListener('click', (e) => {
         toggleNav();
@@ -17,6 +18,9 @@ window.onload =  async () => {
     generateVerticalScroll( body);
     window.addEventListener('scroll', () =>{
         adjustVerticalScroll( height);
+
+        //MODAL SCROLL
+        modalShow(scrolledPastAQuarter(height));
     });
 
     //BACK TO TOP
@@ -26,10 +30,16 @@ window.onload =  async () => {
     submitButton.addEventListener("click", checkForm)
 
     //COIN
+    fetchCoinChange(priceSelector.value)
     priceSelector.addEventListener("change", () =>{
-        changeCoin(priceSelector.value)
+        fetchCoinChange(priceSelector.value)
     })
 
+    //MODAL
+
+    setTimeout(() =>{
+        modalShow(true);
+    }, 5000)
 };
 
  
