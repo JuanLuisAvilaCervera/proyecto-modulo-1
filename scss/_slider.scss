@@ -1,0 +1,80 @@
+#slider-section{
+    #slider{
+        .container{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .image{
+                height: 20rem;
+                width: 40rem;
+                display:none;
+                background-color: rgb(0, 0, 0);
+    
+                img{
+                    height:100%;
+                }
+    
+            }
+            .image.active{
+                display: block !important;
+            }
+
+            .slider-button{
+
+                height: 20rem;
+                background-color: rgb(0, 0, 0);
+                width: 3rem;
+                position:relative;
+
+
+                button{
+                    height:100%;
+                    border-radius: 0;
+                    box-shadow: none;
+                    width: 3rem;
+                    background-color: rgba(0, 0, 0, 0.023);
+
+                    img{
+                        width: 2rem;
+                    }
+                    
+                }
+
+            }
+
+            #left-button{
+                left:3rem;
+                img{
+                    transform: rotate(180deg);
+
+                }
+            }
+            #right-button{
+                right:3rem;
+            }
+
+            
+
+        }
+
+        #markers{
+            position:relative;
+
+            bottom: 2rem;
+
+            .marker{
+                background-color: #737373;
+                width: 1rem;
+                height: 1rem;
+            }
+
+            .active{
+                background-color: #cbcbcb;
+            }
+
+        }
+        
+    }
+}

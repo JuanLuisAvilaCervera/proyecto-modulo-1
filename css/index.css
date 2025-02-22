@@ -120,6 +120,7 @@ main button {
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  cursor: pointer;
   color: #fff;
 }
 
@@ -748,6 +749,62 @@ input[type=checkbox].error {
   border: solid 1px black;
   grid-row: 4;
   justify-self: center;
+}
+
+#slider-section #slider .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#slider-section #slider .container .image {
+  height: 20rem;
+  width: 40rem;
+  display: none;
+  background-color: rgb(0, 0, 0);
+}
+#slider-section #slider .container .image img {
+  height: 100%;
+}
+#slider-section #slider .container .image.active {
+  display: block !important;
+}
+#slider-section #slider .container .slider-button {
+  height: 20rem;
+  background-color: rgb(0, 0, 0);
+  width: 3rem;
+  position: relative;
+}
+#slider-section #slider .container .slider-button button {
+  height: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  width: 3rem;
+  background-color: rgba(0, 0, 0, 0.023);
+}
+#slider-section #slider .container .slider-button button img {
+  width: 2rem;
+}
+#slider-section #slider .container #left-button {
+  left: 3rem;
+}
+#slider-section #slider .container #left-button img {
+  transform: rotate(180deg);
+}
+#slider-section #slider .container #right-button {
+  right: 3rem;
+}
+#slider-section #slider #markers {
+  position: relative;
+  bottom: 2rem;
+}
+#slider-section #slider #markers .marker {
+  background-color: #737373;
+  width: 1rem;
+  height: 1rem;
+}
+#slider-section #slider #markers .active {
+  background-color: #cbcbcb;
 }
 
 :root {

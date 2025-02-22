@@ -7,6 +7,8 @@ window.onload =  async () => {
     const burguer = document.getElementById("nav-burguer");
     const priceSelector = document.getElementById("price-selector");
 
+    const slider = new Slider("slider");
+
 
     //TOGGLE NAV
     burguer.addEventListener('click', (e) => {
