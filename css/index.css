@@ -1,8 +1,8 @@
 header {
   width: 100%;
   background-color: #FFF;
-  justify-items: space-between;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
+  position: absolute;
 }
 header div {
   width: 40%;
@@ -18,10 +18,38 @@ header div, header nav {
 }
 header ul {
   display: none;
+  grid-template: repeat(4, 1fr)/1fr;
+  justify-content: space-around;
+}
+header ul li {
+  text-align: center;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
+  list-style-type: none;
+  vertical-align: middle;
+}
+header ul li a {
+  color: #A5A5A5;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+  text-align: center;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header ul li :hover {
+  color: black;
 }
 
 @media only screen and (min-width: 1000px) {
   header {
+    height: auto !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr;
   }
@@ -40,15 +68,18 @@ header ul {
     align-items: center;
   }
   header ul {
-    height: 100%;
+    margin-top: 0 !important;
+    height: 100% !important;
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) 10%;
+    grid-template: 1fr/repeat(4, 1fr) 10%;
     justify-content: space-around;
+    position: static !important;
   }
   header ul li {
     display: grid !important;
     text-align: center;
     align-items: center;
+    height: auto !important;
   }
   header ul li a {
     color: #A5A5A5;
@@ -89,6 +120,7 @@ main button {
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  cursor: pointer;
   color: #fff;
 }
 
@@ -127,7 +159,7 @@ footer #media {
   }
 }
 #open {
-  padding-top: 100px;
+  padding-top: 15%;
 }
 #open img {
   width: 100%;
@@ -394,6 +426,9 @@ footer #media {
   line-height: 42.26px;
   margin-bottom: 20px;
 }
+#pricing select {
+  margin-bottom: 2rem;
+}
 #pricing article {
   background-color: #fff;
   border-radius: 18px;
@@ -485,15 +520,23 @@ footer #media {
   #pricing {
     padding: 60px 15% !important;
     display: grid !important;
-    grid-template: auto 3fr/1fr 1fr 1fr;
+    grid-template: auto auto 3fr/1fr 1fr 1fr;
     column-gap: 25px;
+    row-gap: 3rem;
   }
   #pricing h2 {
+    grid-row: 1;
     grid-column: 2;
     justify-self: center;
   }
-  #pricing article {
+  #pricing select {
+    height: 2rem;
     grid-row: 2;
+    grid-column: 2;
+    margin-bottom: 0;
+  }
+  #pricing article {
+    grid-row: 3;
     display: grid !important;
     grid-gap: 30px;
     text-align: center;
@@ -625,6 +668,145 @@ footer #media {
     justify-self: end;
   }
 }
+#backToTopDiv {
+  width: 100%;
+  position: sticky;
+  display: flex;
+  justify-items: right;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--app-blue);
+  border: none;
+}
+
+#arrow-up {
+  font-size: 2.5rem;
+}
+
+#scrollable {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  border: solid 3px var(--app-blue);
+}
+
+.error {
+  border: solid 3px red !important;
+  background-color: rgba(255, 0, 0, 0.4666666667) !important;
+}
+
+input[type=checkbox].error {
+  all: unset;
+}
+
+.modal {
+  display: none;
+  background-color: rgba(4, 1, 1, 0.1254901961);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal .modal-content {
+  padding-bottom: 2rem;
+  width: 50%;
+  height: auto;
+  margin: 10% 25% 10% 25%;
+  background-color: white;
+  border: solid 1px black;
+  text-align: center;
+  display: grid;
+  grid-template: auto repeat(3, 1fr);
+  gap: 2rem;
+}
+.modal .modal-content #modal-close-button {
+  width: 2rem;
+  height: 2rem;
+  background-color: red;
+  border-radius: 0;
+  border: solid 1px black;
+  right: 0;
+  grid-row: 1;
+  justify-self: end;
+}
+.modal .modal-content h2 {
+  grid-row: 2;
+}
+.modal .modal-content #inputModalDiv {
+  grid-row: 3;
+}
+.modal .modal-content #modal-subscribe-button {
+  width: 10rem;
+  height: 3rem;
+  border: solid 1px black;
+  grid-row: 4;
+  justify-self: center;
+}
+
+#slider-section #slider .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#slider-section #slider .container .image {
+  height: 20rem;
+  width: 40rem;
+  display: none;
+  background-color: rgb(0, 0, 0);
+}
+#slider-section #slider .container .image img {
+  height: 100%;
+}
+#slider-section #slider .container .image.active {
+  display: block !important;
+}
+#slider-section #slider .container .slider-button {
+  height: 20rem;
+  background-color: rgb(0, 0, 0);
+  width: 3rem;
+  position: relative;
+}
+#slider-section #slider .container .slider-button button {
+  height: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  width: 3rem;
+  background-color: rgba(0, 0, 0, 0.023);
+}
+#slider-section #slider .container .slider-button button img {
+  width: 2rem;
+}
+#slider-section #slider .container #left-button {
+  left: 3rem;
+}
+#slider-section #slider .container #left-button img {
+  transform: rotate(180deg);
+}
+#slider-section #slider .container #right-button {
+  right: 3rem;
+}
+#slider-section #slider #markers {
+  position: relative;
+  bottom: 2rem;
+}
+#slider-section #slider #markers .marker {
+  background-color: #737373;
+  width: 1rem;
+  height: 1rem;
+}
+#slider-section #slider #markers .active {
+  background-color: #cbcbcb;
+}
+
 :root {
   --app-blue: #08A6E4;
   --app-grey: #A5A5A5;

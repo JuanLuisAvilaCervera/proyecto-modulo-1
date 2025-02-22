@@ -19,12 +19,21 @@
     <!-- ICONS -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- JAVASCRIPT -->
+    <script src="./js/header.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/formContact.js"></script>
+    <script src="./js/pricing.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/index.js"></script>
+
 </head>
 <body>
     <header>
         <div id="title"><h1 id="title">OXYGENShop</h1></div>
         <nav>
-            <ion-icon name="menu-outline"></ion-icon>
+            <ion-icon name="menu-outline" id="nav-burguer"></ion-icon>
             <ul>
                 <li><a href="#popular">WHY US?</a></li>
                 <li><a href="#benefits">BENEFITS</a></li>
@@ -104,10 +113,15 @@
         </section>
         <section id="pricing">
             <h2>Pricing</h2>
+            <select name="price-selector" id="price-selector">
+                <option value="eur € right">EUR</option>
+                <option value="usd $ left">USD</option>
+                <option value="gbp &amp;#163; left">GBP</option>
+            </select>
             <article id="basic">
                 <div class="pricing-price">
                     <p>Basic</p>
-                    <p class="pricing-dollars">$0</p>
+                    <p class="pricing-dollars"></p>
                 </div>
                 <div class="pricing-benefits">
                     <ul>
@@ -123,7 +137,7 @@
             <article id="professional">
                 <div class="pricing-price">
                     <p>Professional</p>
-                    <p class="pricing-dollars">$25</p>
+                    <p class="pricing-dollars"></p>
                     <p class="limited">Limited offer</p>
                 </div>
                 <div class="pricing-benefits">
@@ -137,10 +151,11 @@
                 </div>
                 <button class="begin">Begin</button>
             </article>
+            
             <article id="premium">
                 <div class="pricing-price">
                     <p>Premium</p>
-                    <p class="pricing-dollars">$60</p>
+                    <p class="pricing-dollars"></p>
                     <p class="limited">Limited offer</p>
                 </div>
                 <div class="pricing-benefits">
@@ -154,6 +169,44 @@
                 </div>
                 <button class="begin">Begin</button>
             </article>
+        </section>
+        <section id="slider-section">
+            <div id="slider">
+                <div class="container">
+
+                    <div id="left-button" class="slider-button">
+                        <button><img src="./img/arrow.png" alt=""></button>
+                    </div>
+
+                    <div class="image active">
+                        <img src="./img/images.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/iso-republic-a-staircase-climbs-a-building-733x1100.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/iso-republic-aa-batteries-1100x734.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/iso-republic-milky-way-sky-1100x736.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="./img/isorepublic-moon-1100x733.jpg" alt="">
+                    </div>
+
+                    <div id="right-button" class="slider-button">
+                        <button><img src="./img/arrow.png" alt=""></button>
+                    </div>
+                </div>
+                <div id="markers">
+                    <button class="marker active"></button>
+                    <button class="marker"></button>
+                    <button class="marker"></button>
+                    <button class="marker"></button>
+                    <button class="marker"></button>
+                </div>
+                
+            </div>
         </section>
         <section id="contact">
             <div>
@@ -172,7 +225,7 @@
             </div>
             <form action="">
                 <label for="name">NAME</label>
-                <input type="text" id="name">
+                <input type="text" id="name" minlength="2" maxlength="100">
                 <label for="email">EMAIL</label>
                 <input type="text" id="email">
                 <div id="consent-div">
@@ -193,6 +246,27 @@
 
             
         </section>
+        <section id="global">
+            <div id="backToTopDiv">
+                <button id="backToTop">
+                    <ion-icon name="arrow-up" id="arrow-up"></ion-icon>
+                </button>
+
+            </div>
+            <div class="modal" id="modal-subscribe">
+                <div class="modal-content">
+                    <button id="modal-close-button"></button>
+                    <h2>Subscribe to our newsletter!</h2>
+                    <div id="inputModalDiv">
+                        <label for="emailModal">Email: </label>
+                        <input type="email" id="emailModal">
+                    </div>
+                    <button id="modal-subscribe-button"></button>
+                </div>
+            </div>
+        </section>
+        <script src="./js/slider.js"></script>
+        
     </main>
     <footer>
         <div id="copyright">
@@ -204,5 +278,6 @@
             <a href="" id="facebook-button"><img src="./img/icon-facebook.png" alt=""></a>
         </div>
     </footer>
+    
 </body>
 </html>
