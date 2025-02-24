@@ -37,6 +37,7 @@ function modalShow(canShow){
         }else{
             fetchModal();
         }
+        messageError = "";
     })
 
 

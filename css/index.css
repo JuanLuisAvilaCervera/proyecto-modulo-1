@@ -12,6 +12,9 @@ header nav {
   width: 50%;
   text-align: end;
 }
+header nav #nav-burguer {
+  font-size: 1.75rem;
+}
 header div, header nav {
   margin: 0;
   display: inline-block;
@@ -159,7 +162,7 @@ footer #media {
   }
 }
 #open {
-  padding-top: 15%;
+  padding-top: 20%;
 }
 #open img {
   width: 100%;
@@ -193,6 +196,9 @@ footer #media {
 }
 
 @media only screen and (min-width: 1000px) {
+  #open {
+    padding-top: 15% !important;
+  }
   #open h2 {
     font-family: Raleway;
     font-weight: 400;
@@ -597,6 +603,8 @@ footer #media {
 }
 #contact form {
   text-align: start;
+  display: flex;
+  flex-direction: column;
 }
 #contact form label {
   color: var(--app-blue);
@@ -625,6 +633,10 @@ footer #media {
 }
 #contact form input[type=checkbox]:after {
   border: var(--app-blue) 1px solid;
+}
+#contact form button {
+  align-self: center;
+  justify-self: center;
 }
 #contact #consent-div {
   margin-top: 30px;
@@ -714,45 +726,58 @@ input[type=checkbox].error {
   top: 0;
   width: 100%;
   height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.modal .modal-content {
-  width: 50%;
-  height: 24rem;
-  margin: 10% 25% 10% 25%;
-  background-color: white;
-  border: solid 3px var(--app-blue);
-  border-radius: 35px;
-  text-align: center;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  gap: 2rem;
-}
-.modal .modal-content #modal-close-button {
-  width: 2rem;
-  height: 2rem;
+.modal #modal-close-button {
+  width: 3rem;
+  height: 3rem;
   background-color: transparent;
   border-radius: 0;
   color: black;
-  margin-right: 2%;
+  margin-right: 10%;
   margin-top: 2%;
   box-shadow: none;
   font-size: 24px;
   right: 0;
   grid-row: 1;
   justify-self: end;
+  align-self: flex-end;
+  background-color: rgba(0, 0, 0, 0.101);
+  border-radius: 50%;
+}
+.modal .modal-content {
+  min-width: 50%;
+  min-height: 24rem;
+  background-color: white;
+  border: solid 3px var(--app-blue);
+  border-radius: 35px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr repeat(3, 4fr);
+  gap: 2rem;
 }
 .modal .modal-content h2 {
   grid-row: 2;
   font-family: Raleway;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 41.09px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  margin: 0 5%;
 }
 .modal .modal-content #inputModalDiv {
   grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 .modal .modal-content label {
   color: var(--app-blue);
@@ -761,12 +786,14 @@ input[type=checkbox].error {
   font-weight: 600;
   line-height: 14.98px;
   letter-spacing: 3.2799999714px;
-  text-align: left;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  width: 100%;
 }
 .modal .modal-content input {
-  width: 90%;
+  width: 20rem;
+  max-width: 90%;
   background-color: transparent;
   border: none;
   border-bottom: var(--app-grey) solid 1px;
@@ -788,22 +815,28 @@ input[type=checkbox].error {
   align-items: center;
 }
 #slider-section #slider .container .image {
-  height: 20rem;
   width: 40rem;
+  height: 20rem;
+  max-width: 80%;
   display: none;
   background-color: rgb(0, 0, 0);
 }
 #slider-section #slider .container .image img {
-  height: 100%;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
 }
 #slider-section #slider .container .image.active {
-  display: block !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 #slider-section #slider .container .slider-button {
-  height: 20rem;
-  background-color: rgb(0, 0, 0);
+  height: 100%;
   width: 3rem;
   position: relative;
+  box-shadow: none;
 }
 #slider-section #slider .container .slider-button button {
   height: 100%;
@@ -813,7 +846,8 @@ input[type=checkbox].error {
   background-color: rgba(0, 0, 0, 0.023);
 }
 #slider-section #slider .container .slider-button button img {
-  width: 2rem;
+  max-width: 2rem;
+  width: 100%;
 }
 #slider-section #slider .container #left-button {
   left: 3rem;
@@ -837,6 +871,13 @@ input[type=checkbox].error {
   background-color: #cbcbcb;
 }
 
+@media only screen and (min-width: 1000px) {
+  .image img {
+    max-width: 100%;
+    width: auto;
+    height: 100% !important;
+  }
+}
 :root {
   --app-blue: #08A6E4;
   --app-grey: #A5A5A5;

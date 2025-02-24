@@ -55,6 +55,8 @@
 
     form{
         text-align: start;
+        display: flex;
+        flex-direction: column;
 
         label{
             color: var(--app-blue);
@@ -89,6 +91,11 @@
         }
         input[type=checkbox]:after{
             border: var(--app-blue) 1px solid;
+        }
+
+        button{
+            align-self: center;
+            justify-self: center;
         }
     }
 
