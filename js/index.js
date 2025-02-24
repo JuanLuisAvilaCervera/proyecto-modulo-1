@@ -1,8 +1,7 @@
 window.onload =  async () => {
     const html = document.querySelector('html');
     const body = document.querySelector('body');
-    const height = Math.max( body.scrollHeight, body.offsetHeight, 
-                        html.clientHeight, html.scrollHeight, html.offsetHeight );
+    const height = body.offsetHeight - window.innerHeight;
     const submitButton = document.getElementById("send");
     const burguer = document.getElementById("nav-burguer");
     const priceSelector = document.getElementById("price-selector");
