@@ -11,35 +11,14 @@
     justify-content: center;
     align-items: center;
     
-    #modal-close-button{
-        width: 3rem;
-        height: 3rem;
-        background-color: transparent;
-        border-radius: 0;
-        // border: solid 1px black;
-        color: black;
-        margin-right: 10%;
-        margin-top: 2%;
-        box-shadow: none;
-
-        font-size: 24px;
-
-        right: 0;
-        
-        grid-row: 1;
-
-        justify-self: end;
-        align-self: flex-end;
-
-        background-color: rgba(0, 0, 0, 0.101);
-        border-radius: 50%;
-    }
+    
 
     .modal-content{
         // padding-bottom: 2rem;
-        min-width: 50%;
+        // min-width: 50%;
         // width: 16rem;
-        min-height: 24rem;
+        max-width: 95%;
+        min-height: 20rem;
 
         // margin: 10% auto 0 0;
         
@@ -51,10 +30,39 @@
         display: grid;
         justify-content: center;
 
-        grid-template-rows: 1fr repeat(3, 4fr);
-        gap: 2rem;
+        grid-template-rows: 1fr 1fr 2fr;
+        // gap: 2rem;
         
         
+        #modal-close-button{
+            width: 3rem;
+            height: 3rem;
+            background-color: transparent;
+            border-radius: 0;
+            // border: solid 1px black;
+            color: black;
+            margin-right: 10%;
+            margin-top: 2%;
+            box-shadow: none;
+    
+            font-size: 24px;
+    
+            right: 0;
+            
+            grid-row: 1;
+    
+            justify-self: end;
+            align-self: flex-end;
+    
+            // background-color: rgba(0, 0, 0, 0.101);
+            border-radius: 50%;
+
+        }
+
+        #modal-close-button:hover{
+            background-color: rgba(0, 0, 0, 0.101);
+            border-radius: 50%;
+        }
         
 
         h2{
@@ -79,49 +87,63 @@
             align-items: center;
             text-align: center;
             width: 100%;
+            margin-bottom: 2rem;
+
+            form{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            label{
+                color: var(--app-blue);
+                font-family: Open Sans;
+                font-size: 11px;
+                font-weight: 600;
+                line-height: 14.98px;
+                letter-spacing: 3.2799999713897705px;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                width: 100%;
+    
+    
+            }
+    
+            input{
+                width: 20rem;
+                max-width: 90%;
+                background-color: transparent;
+                border: none;
+                border-bottom: var(--app-grey) solid 1px;
+                margin-bottom: 1.5rem;
+                height: 2rem;
+                // display:flex;
+                // justify-self: center;
+                // text-align: center;
+                // $input-width: width;
+                // margin-left: $input-width;
+            }
+
+            #errorParagraphModal{
+                color: red;
+                display:none;
+            }
+
+            #modal-subscribe-button{
+                width: 10rem;
+                height: 3rem;
+    
+                justify-self: center;
+    
+                background-color: var(--app-blue);
+    
+            }
         }
 
-        label{
-            color: var(--app-blue);
-            font-family: Open Sans;
-            font-size: 11px;
-            font-weight: 600;
-            line-height: 14.98px;
-            letter-spacing: 3.2799999713897705px;
-            text-align: center;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            width: 100%;
-
-
-        }
-
-        input{
-            width: 20rem;
-            max-width: 90%;
-            background-color: transparent;
-            border: none;
-            border-bottom: var(--app-grey) solid 1px;
-            margin-bottom: 1.5rem;
-            height: 2rem;
-            // display:flex;
-            // justify-self: center;
-            // text-align: center;
-            // $input-width: width;
-            // margin-left: $input-width;
-        }
         
-        #modal-subscribe-button{
-            width: 10rem;
-            height: 3rem;
-            
-            grid-row: 4;
-
-            justify-self: center;
-
-            background-color: var(--app-blue);
-
-        }
+        
+        
     }
     
     

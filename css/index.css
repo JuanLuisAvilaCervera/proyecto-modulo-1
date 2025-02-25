@@ -689,17 +689,17 @@ footer #media {
 
 #backToTop {
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 5rem;
+  right: 1rem;
   border-radius: 50%;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   background-color: var(--app-blue);
   border: none;
 }
 
 #arrow-up {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 #scrollable {
@@ -718,6 +718,21 @@ input[type=checkbox].error {
   all: unset;
 }
 
+@media only screen and (min-width: 1000px) {
+  #backToTop {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--app-blue);
+    border: none;
+  }
+  #arrow-up {
+    font-size: 2.5rem;
+  }
+}
 .modal {
   display: none;
   background-color: rgba(4, 1, 1, 0.1254901961);
@@ -730,7 +745,18 @@ input[type=checkbox].error {
   justify-content: center;
   align-items: center;
 }
-.modal #modal-close-button {
+.modal .modal-content {
+  max-width: 95%;
+  min-height: 20rem;
+  background-color: white;
+  border: solid 3px var(--app-blue);
+  border-radius: 35px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr 2fr;
+}
+.modal .modal-content #modal-close-button {
   width: 3rem;
   height: 3rem;
   background-color: transparent;
@@ -744,20 +770,11 @@ input[type=checkbox].error {
   grid-row: 1;
   justify-self: end;
   align-self: flex-end;
-  background-color: rgba(0, 0, 0, 0.101);
   border-radius: 50%;
 }
-.modal .modal-content {
-  min-width: 50%;
-  min-height: 24rem;
-  background-color: white;
-  border: solid 3px var(--app-blue);
-  border-radius: 35px;
-  text-align: center;
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 1fr repeat(3, 4fr);
-  gap: 2rem;
+.modal .modal-content #modal-close-button:hover {
+  background-color: rgba(0, 0, 0, 0.101);
+  border-radius: 50%;
 }
 .modal .modal-content h2 {
   grid-row: 2;
@@ -778,8 +795,14 @@ input[type=checkbox].error {
   align-items: center;
   text-align: center;
   width: 100%;
+  margin-bottom: 2rem;
 }
-.modal .modal-content label {
+.modal .modal-content #inputModalDiv form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal .modal-content #inputModalDiv label {
   color: var(--app-blue);
   font-family: Open Sans;
   font-size: 11px;
@@ -791,7 +814,7 @@ input[type=checkbox].error {
   text-decoration-skip-ink: none;
   width: 100%;
 }
-.modal .modal-content input {
+.modal .modal-content #inputModalDiv input {
   width: 20rem;
   max-width: 90%;
   background-color: transparent;
@@ -800,10 +823,13 @@ input[type=checkbox].error {
   margin-bottom: 1.5rem;
   height: 2rem;
 }
-.modal .modal-content #modal-subscribe-button {
+.modal .modal-content #inputModalDiv #errorParagraphModal {
+  color: red;
+  display: none;
+}
+.modal .modal-content #inputModalDiv #modal-subscribe-button {
   width: 10rem;
   height: 3rem;
-  grid-row: 4;
   justify-self: center;
   background-color: var(--app-blue);
 }
