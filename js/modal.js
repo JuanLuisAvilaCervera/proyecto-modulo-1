@@ -1,10 +1,6 @@
 function modalShow(canShow){
 
     const deactivated = localStorage.getItem('deactivated');
-    const modalCloseButton = document.getElementById("modal-close-button");
-    const modalSubscribeButton = document.getElementById("modal-subscribe-button");
-    const modal = document.getElementById("modal-subscribe");
-    
 
     //SHOW MODAL
     if(!deactivated && canShow){
@@ -12,42 +8,14 @@ function modalShow(canShow){
         modal.style.display="flex";
     }
 
-    //CLOSE MODAL
-    modalCloseButton.addEventListener("click", () =>{
-        closeModal();
-    })
-
-    window.addEventListener("click", (event) =>{
-        if(event.target === modal){
-            closeModal();
-        }
-    })
-
-    window.addEventListener("keydown", (event) =>{
-        if(event.key == "Escape"){
-            closeModal();
-        };
-    })
-
-    //SUBSCRIBE
-    modalSubscribeButton.addEventListener('click', () =>{
-        const messageError = emailModalError();
-        if(messageError){
-            alert(messageError);
-        }else{
-            fetchModal();
-        }
-        messageError = "";
-    })
-
-
-
 }
 
-function closeModal(){
+function closeModal(message){
     const modal = document.getElementById("modal-subscribe");
     modal.style.display = "none";
     localStorage.setItem("deactivated", "true")
+
+    
 }
 
 function scrolledPastAQuarter(height){
@@ -58,7 +26,19 @@ function scrolledPastAQuarter(height){
 
 function fetchModal(){
     const email = document.getElementById("emailModal").value;
-
+    // fetch('https://jsonplaceholder.typicode.com/posts', {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //         email: email,
+    //     }),
+    //     headers: {
+    //         'Content-type': 'application/json; charset=UTF-8',
+    //     },
+    // })
+    //     .then((response) => response.json())
+    //     .then((json) => {
+    //         console.log(json)
+    //     })
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({
@@ -72,12 +52,11 @@ function fetchModal(){
         .then((json) => {
             console.log(json)
             alert("Formulario enviado")
-            closeModal();
         })
 }
 
 function emailModalError(){
-    var errorMessage = "";
+    var errorMessage = false;
     const emailInput = document.getElementById("emailModal");
 
     emailInput.addEventListener("click", () =>{
@@ -87,7 +66,7 @@ function emailModalError(){
 
     //EMAIL REAL
     if(!validateEmail(emailInput.value)){
-        errorMessage += "Email incorrecto. Por favor introduzca un email existente.";
+        errorMessage = true;
         emailInput.classList.add("error");
 
     }else{

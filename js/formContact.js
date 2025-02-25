@@ -15,6 +15,10 @@ function nameError(){
     var errorMessage = "";
     const nameInput = document.getElementById("name");
 
+    nameInput.addEventListener("click", () =>{
+        nameInput.classList.remove("error");
+    })
+
     nameInput.classList.remove("error");
     if(nameInput.value.length < 2 || nameInput.value.length > 100 ){
         errorMessage += "Nombre incorrecto. El nombre debe tener entre 2 y 100 caracteres.\n\n";
@@ -26,6 +30,8 @@ function nameError(){
         errorMessage += "Nombre incorrecto. Por favor introduzca sólo letras y espacios.\n\n";
         nameInput.classList.add("error");
     }
+
+
 
     return errorMessage;
 
