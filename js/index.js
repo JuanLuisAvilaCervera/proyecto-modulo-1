@@ -44,7 +44,7 @@ window.onload =  async () => {
     const modalEmailInput = document.getElementById("emailModal");
     const errorParagraph = document.getElementById('errorParagraphModal')
 
-    
+    localStorage.removeItem("deactivated")
 
     setTimeout(() =>{
         modalShow(true);
@@ -82,7 +82,7 @@ window.onload =  async () => {
         }else{
             fetchModal();
             // messageError = true;
-            closeModal();
+            closeModal(true);
         }
     }, {once: true})
 
