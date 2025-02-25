@@ -1,19 +1,23 @@
 function modalShow(canShow){
 
     const deactivated = localStorage.getItem('deactivated');
+    const subscribed = localStorage.getItem('subscribed');
 
     //SHOW MODAL
-    if(!deactivated && canShow){
+    if(!deactivated && !subscribed && canShow){
         const modal = document.getElementById("modal-subscribe");
         modal.style.display="flex";
     }
 
 }
 
-function closeModal(message){
+function closeModal(subscribed){
     const modal = document.getElementById("modal-subscribe");
     modal.style.display = "none";
     localStorage.setItem("deactivated", "true")
+    if(subscribed){
+        localStorage.setItem("subscribed", "true")
+    }
 
     
 }
