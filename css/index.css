@@ -127,14 +127,14 @@ main button {
   color: #fff;
 }
 
-footer {
+.footer {
   box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
   padding: 15px;
 }
-footer h1 {
-  font-size: 26px;
+.footer__title {
+  width: 55%;
 }
-footer p {
+.footer__title__copyright {
   font-size: 11px;
   color: #A5A5A5;
   font-family: "Open Sans";
@@ -145,19 +145,21 @@ footer p {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-footer #copyright, footer #media {
-  width: 55%;
+.footer__title__header {
+  font-size: 26px;
+}
+.footer__media {
+  width: 35%;
+  text-align: end;
+}
+.footer__title, .footer__media {
   margin: 0 2%;
   display: inline-block;
   vertical-align: middle;
 }
-footer #media {
-  width: 35%;
-  text-align: end;
-}
 
 @media only screen and (min-width: 1000px) {
-  footer {
+  .footer {
     padding: 0 137px;
   }
 }

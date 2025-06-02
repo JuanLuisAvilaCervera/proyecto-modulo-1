@@ -1,6 +1,6 @@
 function toggleNav(){
     const header = document.querySelector('header');
-    const ul = header.querySelector('ul');
+    const ul = header.querySelector('#nav__list');
 
     if(ul.style.display === "none" || ul.style.display === ""){
         ul.style.display = "grid";

@@ -1,11 +1,14 @@
-footer{
+.footer{
     box-shadow: 0px -5px 40px 0px #00000033;
     padding: 15px;
 
-    h1{
-        font-size: 26px;
-    }
-    p{
+    
+
+    &__title{
+
+        width: 55%;
+
+       &__copyright{
         font-size: 11px;
         color: #A5A5A5;
         font-family: "Open Sans";
@@ -15,23 +18,29 @@ footer{
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
+        } 
+        &__header{
+            font-size: 26px;
+        }
     }
-
-    #copyright,#media{
-        width: 55%;
+    
+    &__media{
+        width: 35%;
+        text-align: end;
+    }
+    
+    &__title , &__media{
+        
         margin: 0 2%;
         display:inline-block;
         vertical-align: middle;
     }
 
-    #media{
-        width: 35%;
-        text-align: end;
-    }
+    
 }
 
 @media  only screen and (min-width: 1000px){
-    footer{
+    .footer{
         padding: 0 137px;
     }
 }
