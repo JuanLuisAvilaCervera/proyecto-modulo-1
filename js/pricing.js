@@ -19,9 +19,9 @@ function changeCoin(coinChange, symbol, direction){
     const professionalPrice = 25; //EUR
     const premiumPrice = 60; //EUR
 
-    const basic = document.getElementById("basic").getElementsByClassName("pricing-dollars")[0];
-    const professional = document.getElementById("professional").getElementsByClassName("pricing-dollars")[0];
-    const premium = document.getElementById("premium").getElementsByClassName("pricing-dollars")[0];
+    const basic = document.getElementsByClassName("pricing__basic__money")[0];
+    const professional = document.getElementsByClassName("pricing__professional__money")[0];
+    const premium = document.getElementsByClassName("pricing__premium__money")[0];
 
     
 

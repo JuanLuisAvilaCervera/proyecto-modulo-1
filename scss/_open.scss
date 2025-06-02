@@ -1,16 +1,16 @@
-#open{
+.open{
 
     padding-top: 20%;
     
-    img{
+    &__background-image{
         width: 100%;
     }
 
-    h2,p,button{
+    &__header,&__parragraph,&__button{
         margin-bottom: 30px;
     }
 
-    h2{
+    &__header{
         font-family: Raleway;
         font-size: 35px;
         font-weight: 400;
@@ -21,7 +21,7 @@
 
     }
 
-    p{
+    &__parragraph{
         font-family: Open Sans;
         font-size: 16px;
         font-weight: 400;
@@ -33,7 +33,7 @@
         padding: 0 15%;
     }
 
-    button{
+    &__button{
         max-width: 250px;
         background-color: var(--app-blue);
     }
@@ -42,11 +42,11 @@
 }
 
 @media only screen and (min-width: 1000px){
-    #open{
+    .open{
 
         padding-top: 15% !important;
 
-        h2{
+        &__header{
             font-family: Raleway;
             font-weight: 400;
             font-size: 49px;
@@ -56,7 +56,7 @@
 
         }
 
-        img{
+        &__background-image{
             content: url(../img/bgi-open-2.png);
         }
     }

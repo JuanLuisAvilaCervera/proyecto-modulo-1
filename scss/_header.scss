@@ -1,5 +1,5 @@
 
-header{
+.header{
     width: 100%;
     background-color: #FFF;
 
@@ -7,136 +7,141 @@ header{
 
     position: absolute;
 
+    &__div{
 
-    div{
         width: 40%;
         padding: 2%;
+
     }
 
-    nav{
+    &__nav{
         width: 50%;
         text-align: end;
 
-        #nav-burguer{
+        &__burguer{
             font-size: 1.75rem;
         }
-    }
-    
 
-    div,nav{
+        &__list{
+            display:none;
+            grid-template: repeat(4, 1fr) / 1fr;
+            justify-content: space-around;
+        
+                &__item{
+                    
+                    // display: grid !important;
+                    text-align: center;
+                    align-items: center;
+                    height: 2rem;
+                    width: 100%;
+                    list-style-type: none;
+                    vertical-align: middle;
+        
+                    &__anchor{
+                        color: #A5A5A5;
+                        font-family: "Open Sans";
+                        font-size: 11px;
+                        font-weight: 700;
+                        line-height: 15px;
+                        letter-spacing: 3.28px;
+                        text-align: center;
+                        text-decoration: none;
+                        height: 100%;
+                        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    :hover{
+                        color: black;
+                    }
+                    
+                }
+        }
+    }
+
+    &__div , &__nav{
         margin: 0;
         display: inline-block;
     }
 
-    ul{
-        display:none;
-        grid-template: repeat(4, 1fr) / 1fr;
-        justify-content: space-around;
     
-            li{
-                
-                // display: grid !important;
-                text-align: center;
-                align-items: center;
-                height: 2rem;
-                width: 100%;
-                list-style-type: none;
-                vertical-align: middle;
-    
-                a{
-                    color: #A5A5A5;
-                    font-family: "Open Sans";
-                    font-size: 11px;
-                    font-weight: 700;
-                    line-height: 15px;
-                    letter-spacing: 3.28px;
-                    text-align: center;
-                    text-decoration: none;
-                    height: 100%;
-                    
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                :hover{
-                    color: black;
-                }
-                
-            }
-    }
 }
 
 @media only screen and (min-width: 1000px) {
 
-    header{
+    .header{
         height: auto !important;
         display: grid !important;
         
         grid-template-columns: 1fr 1fr;
 
-        ion-icon{
-            display:none !important;
-        }
-
-        nav,div{
-            width: 100%;
-        }
-        
-        div{
+        &__div{
             margin-left: 10%;
         }
 
-        nav{
+        &__nav{
+
             margin-right: 10%;
             height:100% !important;
             align-items: center;
-        }
-    
-        ul{
-            margin-top: 0 !important;
-            height: 100% !important;
-            display:grid !important;
-            grid-template: 1fr / repeat(4, 1fr) 10%;
-            justify-content: space-around;
-            position: static !important;
-    
-            li{
-                
-                display: grid !important;
-                text-align: center;
-                align-items: center;
-                height: auto !important;
-    
-                a{
-                    color: #A5A5A5;
-                    font-family: "Open Sans";
-                    font-size: 11px;
-                    font-weight: 700;
-                    line-height: 15px;
-                    letter-spacing: 3.28px;
+
+            &__burguer{
+                display:none !important;
+            }
+
+            &__list{
+                margin-top: 0 !important;
+                height: 100% !important;
+                display:grid !important;
+                grid-template: 1fr / repeat(4, 1fr) 10%;
+                justify-content: space-around;
+                position: static !important;
+        
+                &__item{
+                    
+                    display: grid !important;
                     text-align: center;
-                    text-decoration: none;
-                    height: 100%;
-                    
-                    display: flex;
                     align-items: center;
-                    justify-content: center;
-                }
+                    height: auto !important;
+        
+                    &__anchor{
+                        color: #A5A5A5;
+                        font-family: "Open Sans";
+                        font-size: 11px;
+                        font-weight: 700;
+                        line-height: 15px;
+                        letter-spacing: 3.28px;
+                        text-align: center;
+                        text-decoration: none;
+                        height: 100%;
+                        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
 
-                
-            }
-
-            li:hover{
-
-                border-bottom: solid 3px var(--app-blue);
-
-                a{
-                    color: black;
                     
                 }
+
+                :hover{
+
+                    border-bottom: solid 3px var(--app-blue);
+
+                    a{
+                        color: black;
+                        
+                    }
+                }
             }
+            
         }
+
+        &__div , &__nav{
+            width: 100%;
+        }
+        
     }
     
 }

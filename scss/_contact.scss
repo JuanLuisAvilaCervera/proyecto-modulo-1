@@ -1,31 +1,48 @@
-#contact{
+.contact{
 
-    padding: 30px;
+    padding: 1rem;
 
-    h2{
-        font-family: Raleway;
-        font-size: 40px;
-        font-weight: 400;
-        line-height: 46.96px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-    }
+    &__info{
+        &__header{
+            font-family: Raleway;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 46.96px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
 
-    h5{
-        font-family: Open Sans;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
+        &__desc{
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 30px;
+        }
+
+        &__list{
+        list-style-type: none;
+        text-align: start;
         margin-bottom: 30px;
+
+            &__item{
+                *{
+                    display: inline-block;
+                }
+
+                &__icon{
+                    color: var(--app-blue);
+                    
+                }
+            }
+        }
     }
 
-
-
-    p{
+    &__p{
         font-family: Open Sans;
         font-size: 16px;
         font-weight: 400;
@@ -36,29 +53,15 @@
         color: var(--app-grey)
     }
 
-    ul{
-        list-style-type: none;
-        text-align: start;
-        margin-bottom: 30px;
+    
 
-        li{
-            *{
-                display: inline-block;
-            }
-
-            ion-icon{
-                color: var(--app-blue);
-                
-            }
-        }
-    }
-
-    form{
+    &__form{
         text-align: start;
         display: flex;
         flex-direction: column;
+        
 
-        label{
+        &__label{
             color: var(--app-blue);
             font-family: Open Sans;
             font-size: 11px;
@@ -71,7 +74,7 @@
 
         }
 
-        input[type=text]{
+        &__input[type=text]{
             
             width: 100%;
             background-color: transparent;
@@ -81,81 +84,75 @@
             height: 2rem;
         }
 
-        input[type=checkbox]{
-            
-            width: 24px;
-            height: 24px;
-            border: 1px solid grey;
-            border-radius: 4px ;
-            
-        }
-        input[type=checkbox]:after{
-            border: var(--app-blue) 1px solid;
+        &__consent{
+            margin-top: 30px;
+            top:0;
+            position: relative;
+
+            *{
+                display: inline-block;
+                vertical-align: top;
+            }
+            &__checkbox{
+                &__accept{
+                        
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid grey;
+                    border-radius: 4px ;
+                    :after{
+                        border: var(--app-blue) 1px solid;
+                    }
+                }
+            }
+
+            &__label{
+                width: 80%;
+
+                &__contact__form__consent__label__p{
+                    font-size: 12px;
+                    letter-spacing: normal;
+                }
+            }
         }
 
-        button{
+        
+
+        &__submit{
+            width:226px;
+            height: 57px;
+            position: relative;
+            background-color: var(--app-blue);
             align-self: center;
             justify-self: center;
         }
     }
 
-    
-
-    #consent-div{
-
-        margin-top: 30px;
-
-        *{
-            display: inline-block;
-            vertical-align: top;
-        }
-
-        #input-div{
-            top:0;
-            position: relative;
-        }
-        
-
-        label{
-
-            width: 80%;
-
-            p{
-                font-size: 12px;
-                letter-spacing: normal;
-            }
-
-        } 
-    }
-
-    button{
-        width:226px;
-        height: 57px;
-        position: relative;
-        // margin-left: 100px;
-        background-color: var(--app-blue);
-    }
-
 }
 
 @media only screen and (min-width: 1000px){
-    #contact{
+    .contact{
         padding: 5% 15% !important;
         display: grid !important;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
 
-        ul{
+        &__info{
+            &__list{
+                &__item{
+                    display: inline-block;
+                }
 
-            li{
-                display: inline-block;
             }
         }
-        form{
+
+
+        
+        &__form{
 
             display: grid;
 
-            button{
+            &__submit{
                 justify-self:end;
             }
         }

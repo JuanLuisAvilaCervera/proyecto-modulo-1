@@ -1,40 +1,70 @@
-#popular{
+.popular{
 
 
-    .data-icon{
-        img{
-            margin-top: 5px;
-            position: absolute;
-            z-index: 3;
+    &__data{
+        &__icon{
+            &__image{
+                margin-top: 5px;
+                position: absolute;
+                z-index: 3;
+
+                &__eye{
+                    margin-top: 15px;
+                }
+            }
+
+            &__circle{
+            width: 62.71px;
+            height: 62.71px;
+            border-radius:100%;
+            position: relative;
+            left: calc(50% - 31px);
+            margin-bottom: 15px;
+
+            &__red{
+                background-color: var(--app-red);
+            }
+
+            &__blue{
+                background-color: var(--app-blue);
+            }
+
+            &__green{
+                background-color: var(--app-green);
+            }
+        }
         }
 
-        #eye{
-            margin-top: 15px;
+        &__number{
+            font-family: Raleway;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 24px;
+            letter-spacing: 5.960000038146973px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        
+            margin-bottom: 20px;
         }
+
+        &__description{
+            font-family: Raleway;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 20px;
+            color: var(--app-grey);
+        }
+        
+        
     }
 
-    .circle{
-        width: 62.71px;
-        height: 62.71px;
-        border-radius:100%;
-        position: relative;
-        left: calc(50% - 31px);
-        margin-bottom: 15px;
-    }
 
-    .one{
-        background-color: var(--app-red);
-    }
-
-    .two{
-        background-color: var(--app-blue);
-    }
-
-    .three{
-        background-color: var(--app-green);
-    }
-
-    h2{
+    &__header{
         
         font-family: Raleway;
         font-size: 20px;
@@ -45,41 +75,20 @@
         margin-bottom: 20px;
     }
     
-    h5{
-        font-family: Raleway;
-        font-size: 20px;
-        font-weight: 800;
-        line-height: 24px;
-        letter-spacing: 5.960000038146973px;
-        text-align: center;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-       
-        margin-bottom: 20px;
-    }
+    
 
-    p{
-        font-family: Raleway;
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 20px;
-        text-align: center;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        margin-bottom: 20px;
-        color: var(--app-grey);
-    }
+    
 
 }
 
 @media only screen and (min-width: 1000px){
-    #popular{
+    .popular{
         padding: 0 15% 10% 15%!important;
         display: grid !important;
         grid-template: 3fr 3fr / 1fr 1fr 1fr;
         column-gap: 25px;
 
-        h2{
+        &__header{
             font-family: Raleway;
             font-size: 36px;
             font-weight: 400;
@@ -92,7 +101,7 @@
             grid-column: 1 / span 3;
         }
 
-        .data{
+        &__data{
             grid-row: 2;
         }
     }
