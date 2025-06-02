@@ -77,7 +77,7 @@
                 <p class="popular__data__description">added posts daily</p>
             </div>
         </section>
-        <section class="benefits">
+        <section id="benefits" class="benefits">
             <article class="benefits__article">
                 <div class="benefits__article__mac benefits__article__div">
                     <img src="./img/benefits-frame.png" alt=""  class="benefits__article__mac__red">
@@ -111,63 +111,63 @@
                 </div>
             </article>
         </section>
-        <section id="pricing">
-            <h2>Pricing</h2>
-            <select name="price-selector" id="price-selector">
-                <option value="eur € right">EUR</option>
-                <option value="usd $ left">USD</option>
-                <option value="gbp &amp;#163; left">GBP</option>
+        <section id="pricing" class="pricing">
+            <h2 class="pricing__header">Pricing</h2>
+            <select name="price-selector" id="price-selector" class="pricing__selector">
+                <option value="eur € right" class="pricing__selector__option">EUR</option>
+                <option value="usd $ left" class="pricing__selector__option">USD</option>
+                <option value="gbp &amp;#163; left" class="pricing__selector__option">GBP</option>
             </select>
-            <article id="basic">
-                <div class="pricing-price">
-                    <p>Basic</p>
-                    <p class="pricing-dollars"></p>
+            <article id="basic" class="pricing__basic pricing__article">
+                <div class="pricing__article__price">
+                    <p class="pricing__article__price__tier">Basic</p>
+                    <p class="pricing__article__price__money pricing__basic__money"></p>
                 </div>
-                <div class="pricing-benefits">
-                    <ul>
-                        <li><img src="./img/checkbox.png" alt=""><p>100 MB HDD</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>1 Subdomain</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>2 E-mails</p></li>
-                        <li><img src="./img/cross-checkbox.png" alt=""><p>Two years license</p></li>
-                        <li><img src="./img/cross-checkbox.png" alt=""><p>Full support</p></li>
+                <div class="pricing__article__benefits">
+                    <ul class="pricing__article__benefits__list">
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">100 MB HDD</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">1 Subdomain</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">2 E-mails</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/cross-checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">Two years license</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/cross-checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">Full support</p></li>
                     </ul>
                 </div>
-                <button class="begin">Begin</button>
+                <button class="pricing__article__begin pricing__basic__begin">Begin</button>
             </article>
-            <article id="professional">
-                <div class="pricing-price">
-                    <p>Professional</p>
-                    <p class="pricing-dollars"></p>
-                    <p class="limited">Limited offer</p>
+            <article id="professional" class="pricing__professional pricing__article">
+                <div class="pricing__article__price">
+                    <p class="pricing__article__price__tier">Professional</p>
+                    <p class="pricing__article__price__money pricing__professional__money"></p>
+                    <p class="pricing__article__price__limited">Limited offer</p>
                 </div>
-                <div class="pricing-benefits">
-                    <ul>
-                        <li><img src="./img/checkbox.png" alt=""><p>100 MB HDD</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>1 Subdomain</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>2 E-mails</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>One year license</p></li>
-                        <li><img src="./img/cross-checkbox.png" alt=""><p>Full support</p></li>
+                <div class="pricing__article__benefits">
+                    <ul class="pricing__article__benefits__list">
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">100 MB HDD</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">1 Subdomain</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">2 E-mails</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">One year license</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/cross-checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">Full support</p></li>
                     </ul>
                 </div>
-                <button class="begin">Begin</button>
+                <button class="pricing__article__begin pricing__professional__begin">Begin</button>
             </article>
             
-            <article id="premium">
-                <div class="pricing-price">
-                    <p>Premium</p>
-                    <p class="pricing-dollars"></p>
-                    <p class="limited">Limited offer</p>
+            <article id="premium" class="pricing__premium pricing__article">
+                <div class="pricing__article__price">
+                    <p class="pricing__article__price__tier">Premium</p>
+                    <p class="pricing__article__price__money pricing__premium__money"></p>
+                    <p class="pricing__article__price__limited">Limited offer</p>
                 </div>
-                <div class="pricing-benefits">
-                    <ul>
-                        <li><img src="./img/checkbox.png" alt=""><p>2 GB HDD</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>5 Subdomains</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>20 E-mails</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>Two years license</p></li>
-                        <li><img src="./img/checkbox.png" alt=""><p>Full support</p></li>
+                <div class="pricing__article__benefits">
+                    <ul class="pricing__article__benefits__list">
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">2 GB HDD</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">5 Subdomains</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">20 E-mails</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">Two years license</p></li>
+                        <li class="pricing__article__benefits__list__item"><img src="./img/checkbox.png" alt=""><p class="pricing__article__benefits__list__item__desc">Full support</p></li>
                     </ul>
                 </div>
-                <button class="begin">Begin</button>
+                <button class="pricing__article__begin pricing__premium__begin">Begin</button>
             </article>
         </section>
         <section id="slider-section">
@@ -208,37 +208,37 @@
                 
             </div>
         </section>
-        <section id="contact">
-            <div>
-                <h2>Any questions?</h2>
-                <h5>Leave your email address or call us!</h5>
-                <ul>
-                    <li>
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <p>info@betshop.xyz</p>
+        <section id="contact" class="contact">
+            <div class="contact__info">
+                <h2 class="contact__info__header">Any questions?</h2>
+                <h5 class="contact__info__desc">Leave your email address or call us!</h5>
+                <ul class="contact__info__list">
+                    <li class="contact__info__list__item">
+                        <ion-icon name="mail-outline" class="contact__info__list__item__icon"></ion-icon>
+                        <p class="contact__info__list__item__email contact__p">info@betshop.xyz</p>
                     </li>
-                    <li>
-                        <ion-icon name="call-outline"></ion-icon>
-                        <p>info@betshop.xyz</p>
+                    <li class="contact__info__list__item">
+                        <ion-icon name="call-outline" class="contact__info__list__item__icon"></ion-icon>
+                        <p class="contact__info__list__item__email contact__p">info@betshop.xyz</p>
                     </li>
                 </ul>
             </div>
-            <form action="">
-                <label for="name">NAME</label>
-                <input type="text" id="name" minlength="2" maxlength="100">
-                <label for="email">EMAIL</label>
-                <input type="text" id="email">
-                <div id="consent-div">
-                    <div id="input-div">
-                        <input type="checkbox" id="consent">
+            <form action="" class="contact__form">
+                <label for="name" class="contact__form__label">NAME</label>
+                <input type="text" id="name" minlength="2" maxlength="100" class="contact__form__input">
+                <label for="email" class="contact__form__label">EMAIL</label>
+                <input type="text" id="email" class="contact__form__input">
+                <div id="consent-div" class="contact__form__consent">
+                    <div id="input-div" class="contact__form__consent__checkbox">
+                        <input type="checkbox" id="consent" class="contact__form__consent__checkbox__accept">
                     </div>
-                    <label for="consent">
-                        <p>
+                    <label for="consent" class="contact__form__consent__label">
+                        <p class="contact__form__consent__label__p contact__p">
                             I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament´s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
                         </p>
                     </label>
                 </div>
-                <button id="send">
+                <button id="send" class="contact__form__submit">
                     Send
                 </button>
             </form>

@@ -1,8 +1,8 @@
-#pricing{
+.pricing{
 
     padding: 60px 4%;
 
-    h2{
+    &__header{
         font-family: Raleway;
         font-size: 36px;
         font-weight: 400;
@@ -11,57 +11,64 @@
 
     }
 
-    select{
+    &__selector{
         margin-bottom: 2rem;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        height: 2.2rem;
     }
-    article{
+    &__article{
         background-color: #fff;
         border-radius: 18px;
         border: 2px solid;
         padding-top: 60px;
         margin-bottom: 50px;
+        position: relative;
+        vertical-align: center;
 
-        div{
+        &__price{
             display: inline-block;
             position:relative;
             width: 40%;
             vertical-align: middle;
-        }
 
-        .pricing-price{
 
-            p{
-                font-family: Raleway;
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 24.48px;
-
-            }
-
-            .pricing-dollars{
+            &__money{
                 font-family: Open Sans;
                 font-size: 46px;
                 font-weight: 300;
                 line-height: 62px;
-
             }
 
-            .limited{
+            &__tier{
                 font-family: Raleway;
-                font-size: 12px;
+                font-size: 20px;
                 font-weight: 700;
-                line-height: 14.09px;
+                line-height: 24.48px;
+                margin-bottom: 0.3rem;
+            }
+
+            &__limited{
+                font-family: Raleway;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 20.48px;
 
             }
         }
 
-        .pricing-benefits{
-            vertical-align: center;
-            width: 50%;
 
-            ul{
+        &__benefits{
+
+            display:inline-block;
+            position:relative;
+            vertical-align: middle;
+
+
+            &__list{
                 list-style-type: none;
-                li{
+                &__item{
                     text-align: start;
                     margin-bottom: 25px;
 
@@ -70,7 +77,7 @@
                         margin: 0 3px;
                     }
 
-                    p{
+                    &__desc{
                         font-family: Open Sans;
                         font-size: 14px;
                         font-weight: 400;
@@ -80,7 +87,7 @@
                 }
             }
         }
-        .begin{
+        &__begin{
             width: 150px;
             height: 50px;
             position: relative;
@@ -91,32 +98,35 @@
 
     
 
-    #basic{
+    &__basic{
         border-color: var(--app-red);
-        button{
+
+        &__begin{
             background-color: var(--app-red);
         }
-        .pricing-dollars{
+        &__money{
             color: var(--app-red)
         }
     }
 
-    #professional{
+    &__professional{
         border-color: var(--app-blue);
-        button{
+
+        &__begin{
             background-color: var(--app-blue);
         }
-        .pricing-dollars{
+        &__money{
             color: var(--app-blue)
         }
     }
 
-    #premium{
+    &__premium{
         border-color: var(--app-green);
-        button{
+
+        &__begin{
             background-color: var(--app-green);
         }
-        .pricing-dollars{
+        &__money{
             color: var(--app-green)
         }
     }
@@ -124,43 +134,47 @@
 }
 
 @media only screen and (min-width: 1000px){
-    #pricing{
+    .pricing{
         padding: 60px 15% !important;
         display: grid !important;
         grid-template: auto auto 3fr / 1fr 1fr 1fr;
         column-gap: 25px;
         row-gap: 3rem;
 
-        h2{
+        &__header{
             grid-row: 1;
             grid-column: 2;
             justify-self:center;
         }
 
-        select{
+        
+
+        &__selector{
             height: 2rem;
             grid-row: 2;
             grid-column: 2;
             margin-bottom: 0;
         }
 
-        article{
+        &__article{
             grid-row: 3;
             display: grid !important;
             grid-gap: 30px;
             text-align: center;
             justify-content: center;
 
-            div{
+            &__price , &__benefits{
                 width: 100% !important;
             }
-        }
 
-        article:hover{
+            
+        }
+        &__article:hover{
             box-shadow: 5px 10px 27px 0px #07ACE64A;
             position: relative;
             transform: scale(1.1);
             transition: 0.2s ease-out, 0.2s ease-in;
         }
+        
     }
 }

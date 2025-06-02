@@ -432,146 +432,154 @@ footer #media {
     column-gap: 30px;
   }
 }
-#pricing {
+.pricing {
   padding: 60px 4%;
 }
-#pricing h2 {
+.pricing__header {
   font-family: Raleway;
   font-size: 36px;
   font-weight: 400;
   line-height: 42.26px;
   margin-bottom: 20px;
 }
-#pricing select {
+.pricing__selector {
   margin-bottom: 2rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  height: 2.2rem;
 }
-#pricing article {
+.pricing__article {
   background-color: #fff;
   border-radius: 18px;
   border: 2px solid;
   padding-top: 60px;
   margin-bottom: 50px;
+  position: relative;
+  vertical-align: center;
 }
-#pricing article div {
+.pricing__article__price {
   display: inline-block;
   position: relative;
   width: 40%;
   vertical-align: middle;
 }
-#pricing article .pricing-price p {
-  font-family: Raleway;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24.48px;
-}
-#pricing article .pricing-price .pricing-dollars {
+.pricing__article__price__money {
   font-family: Open Sans;
   font-size: 46px;
   font-weight: 300;
   line-height: 62px;
 }
-#pricing article .pricing-price .limited {
+.pricing__article__price__tier {
   font-family: Raleway;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 14.09px;
+  line-height: 24.48px;
+  margin-bottom: 0.3rem;
 }
-#pricing article .pricing-benefits {
-  vertical-align: center;
-  width: 50%;
+.pricing__article__price__limited {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20.48px;
 }
-#pricing article .pricing-benefits ul {
+.pricing__article__benefits {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.pricing__article__benefits__list {
   list-style-type: none;
 }
-#pricing article .pricing-benefits ul li {
+.pricing__article__benefits__list__item {
   text-align: start;
   margin-bottom: 25px;
 }
-#pricing article .pricing-benefits ul li * {
+.pricing__article__benefits__list__item * {
   display: inline-block;
   margin: 0 3px;
 }
-#pricing article .pricing-benefits ul li p {
+.pricing__article__benefits__list__item__desc {
   font-family: Open Sans;
   font-size: 14px;
   font-weight: 400;
   line-height: 19.07px;
   text-align: center;
 }
-#pricing article .begin {
+.pricing__article__begin {
   width: 150px;
   height: 50px;
   position: relative;
   top: 30px;
 }
-#pricing #basic {
+.pricing__basic {
   border-color: var(--app-red);
 }
-#pricing #basic button {
+.pricing__basic__begin {
   background-color: var(--app-red);
 }
-#pricing #basic .pricing-dollars {
+.pricing__basic__money {
   color: var(--app-red);
 }
-#pricing #professional {
+.pricing__professional {
   border-color: var(--app-blue);
 }
-#pricing #professional button {
+.pricing__professional__begin {
   background-color: var(--app-blue);
 }
-#pricing #professional .pricing-dollars {
+.pricing__professional__money {
   color: var(--app-blue);
 }
-#pricing #premium {
+.pricing__premium {
   border-color: var(--app-green);
 }
-#pricing #premium button {
+.pricing__premium__begin {
   background-color: var(--app-green);
 }
-#pricing #premium .pricing-dollars {
+.pricing__premium__money {
   color: var(--app-green);
 }
 
 @media only screen and (min-width: 1000px) {
-  #pricing {
+  .pricing {
     padding: 60px 15% !important;
     display: grid !important;
     grid-template: auto auto 3fr/1fr 1fr 1fr;
     column-gap: 25px;
     row-gap: 3rem;
   }
-  #pricing h2 {
+  .pricing__header {
     grid-row: 1;
     grid-column: 2;
     justify-self: center;
   }
-  #pricing select {
+  .pricing__selector {
     height: 2rem;
     grid-row: 2;
     grid-column: 2;
     margin-bottom: 0;
   }
-  #pricing article {
+  .pricing__article {
     grid-row: 3;
     display: grid !important;
     grid-gap: 30px;
     text-align: center;
     justify-content: center;
   }
-  #pricing article div {
+  .pricing__article__price, .pricing__article__benefits {
     width: 100% !important;
   }
-  #pricing article:hover {
+  .pricing__article:hover {
     box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
     position: relative;
     transform: scale(1.1);
     transition: 0.2s ease-out, 0.2s ease-in;
   }
 }
-#contact {
-  padding: 30px;
+.contact {
+  padding: 1rem;
 }
-#contact h2 {
+.contact__info__header {
   font-family: Raleway;
   font-size: 40px;
   font-weight: 400;
@@ -580,7 +588,7 @@ footer #media {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-#contact h5 {
+.contact__info__desc {
   font-family: Open Sans;
   font-size: 16px;
   font-weight: 400;
@@ -590,7 +598,18 @@ footer #media {
   text-decoration-skip-ink: none;
   margin-bottom: 30px;
 }
-#contact p {
+.contact__info__list {
+  list-style-type: none;
+  text-align: start;
+  margin-bottom: 30px;
+}
+.contact__info__list__item * {
+  display: inline-block;
+}
+.contact__info__list__item__icon {
+  color: var(--app-blue);
+}
+.contact__p {
   font-family: Open Sans;
   font-size: 16px;
   font-weight: 400;
@@ -600,23 +619,12 @@ footer #media {
   text-decoration-skip-ink: none;
   color: var(--app-grey);
 }
-#contact ul {
-  list-style-type: none;
-  text-align: start;
-  margin-bottom: 30px;
-}
-#contact ul li * {
-  display: inline-block;
-}
-#contact ul li ion-icon {
-  color: var(--app-blue);
-}
-#contact form {
+.contact__form {
   text-align: start;
   display: flex;
   flex-direction: column;
 }
-#contact form label {
+.contact__form__label {
   color: var(--app-blue);
   font-family: Open Sans;
   font-size: 11px;
@@ -627,7 +635,7 @@ footer #media {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-#contact form input[type=text] {
+.contact__form__input[type=text] {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -635,58 +643,54 @@ footer #media {
   margin-bottom: 1.5rem;
   height: 2rem;
 }
-#contact form input[type=checkbox] {
+.contact__form__consent {
+  margin-top: 30px;
+  top: 0;
+  position: relative;
+}
+.contact__form__consent * {
+  display: inline-block;
+  vertical-align: top;
+}
+.contact__form__consent__checkbox__accept {
   width: 24px;
   height: 24px;
   border: 1px solid grey;
   border-radius: 4px;
 }
-#contact form input[type=checkbox]:after {
+.contact__form__consent__checkbox__accept :after {
   border: var(--app-blue) 1px solid;
 }
-#contact form button {
-  align-self: center;
-  justify-self: center;
-}
-#contact #consent-div {
-  margin-top: 30px;
-}
-#contact #consent-div * {
-  display: inline-block;
-  vertical-align: top;
-}
-#contact #consent-div #input-div {
-  top: 0;
-  position: relative;
-}
-#contact #consent-div label {
+.contact__form__consent__label {
   width: 80%;
 }
-#contact #consent-div label p {
+.contact__form__consent__label__contact__form__consent__label__p {
   font-size: 12px;
   letter-spacing: normal;
 }
-#contact button {
+.contact__form__submit {
   width: 226px;
   height: 57px;
   position: relative;
   background-color: var(--app-blue);
+  align-self: center;
+  justify-self: center;
 }
 
 @media only screen and (min-width: 1000px) {
-  #contact {
+  .contact {
     padding: 5% 15% !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
-  #contact ul li {
+  .contact__info__list__item {
     display: inline-block;
   }
-  #contact form {
+  .contact__form {
     display: grid;
   }
-  #contact form button {
+  .contact__form__submit {
     justify-self: end;
   }
 }
