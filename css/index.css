@@ -1,30 +1,26 @@
-header {
+.header {
   width: 100%;
   background-color: #FFF;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   position: absolute;
 }
-header div {
+.header__div {
   width: 40%;
   padding: 2%;
 }
-header nav {
+.header__nav {
   width: 50%;
   text-align: end;
 }
-header nav #nav-burguer {
+.header__nav__burguer {
   font-size: 1.75rem;
 }
-header div, header nav {
-  margin: 0;
-  display: inline-block;
-}
-header ul {
+.header__nav__list {
   display: none;
   grid-template: repeat(4, 1fr)/1fr;
   justify-content: space-around;
 }
-header ul li {
+.header__nav__list__item {
   text-align: center;
   align-items: center;
   height: 2rem;
@@ -32,7 +28,7 @@ header ul li {
   list-style-type: none;
   vertical-align: middle;
 }
-header ul li a {
+.header__nav__list__item__anchor {
   color: #A5A5A5;
   font-family: "Open Sans";
   font-size: 11px;
@@ -46,31 +42,32 @@ header ul li a {
   align-items: center;
   justify-content: center;
 }
-header ul li :hover {
+.header__nav__list__item :hover {
   color: black;
+}
+.header__div, .header__nav {
+  margin: 0;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 1000px) {
-  header {
+  .header {
     height: auto !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr;
   }
-  header ion-icon {
-    display: none !important;
-  }
-  header nav, header div {
-    width: 100%;
-  }
-  header div {
+  .header__div {
     margin-left: 10%;
   }
-  header nav {
+  .header__nav {
     margin-right: 10%;
     height: 100% !important;
     align-items: center;
   }
-  header ul {
+  .header__nav__burguer {
+    display: none !important;
+  }
+  .header__nav__list {
     margin-top: 0 !important;
     height: 100% !important;
     display: grid !important;
@@ -78,13 +75,13 @@ header ul li :hover {
     justify-content: space-around;
     position: static !important;
   }
-  header ul li {
+  .header__nav__list__item {
     display: grid !important;
     text-align: center;
     align-items: center;
     height: auto !important;
   }
-  header ul li a {
+  .header__nav__list__item__anchor {
     color: #A5A5A5;
     font-family: "Open Sans";
     font-size: 11px;
@@ -98,11 +95,14 @@ header ul li :hover {
     align-items: center;
     justify-content: center;
   }
-  header ul li:hover {
+  .header__nav__list :hover {
     border-bottom: solid 3px var(--app-blue);
   }
-  header ul li:hover a {
+  .header__nav__list :hover a {
     color: black;
+  }
+  .header__div, .header__nav {
+    width: 100%;
   }
 }
 main {
@@ -161,16 +161,16 @@ footer #media {
     padding: 0 137px;
   }
 }
-#open {
+.open {
   padding-top: 20%;
 }
-#open img {
+.open__background-image {
   width: 100%;
 }
-#open h2, #open p, #open button {
+.open__header, .open__parragraph, .open__button {
   margin-bottom: 30px;
 }
-#open h2 {
+.open__header {
   font-family: Raleway;
   font-size: 35px;
   font-weight: 400;
@@ -179,7 +179,7 @@ footer #media {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-#open p {
+.open__parragraph {
   font-family: Open Sans;
   font-size: 16px;
   font-weight: 400;
@@ -190,16 +190,16 @@ footer #media {
   text-align: center;
   padding: 0 15%;
 }
-#open button {
+.open__button {
   max-width: 250px;
   background-color: var(--app-blue);
 }
 
 @media only screen and (min-width: 1000px) {
-  #open {
+  .open {
     padding-top: 15% !important;
   }
-  #open h2 {
+  .open__header {
     font-family: Raleway;
     font-weight: 400;
     font-size: 49px;
@@ -207,19 +207,19 @@ footer #media {
     letter-spacing: 0%;
     text-align: center;
   }
-  #open img {
+  .open__background-image {
     content: url(../img/bgi-open-2.png);
   }
 }
-#popular .data-icon img {
+.popular__data__icon__image {
   margin-top: 5px;
   position: absolute;
   z-index: 3;
 }
-#popular .data-icon #eye {
+.popular__data__icon__image__eye {
   margin-top: 15px;
 }
-#popular .circle {
+.popular__data__icon__circle {
   width: 62.71px;
   height: 62.71px;
   border-radius: 100%;
@@ -227,25 +227,16 @@ footer #media {
   left: calc(50% - 31px);
   margin-bottom: 15px;
 }
-#popular .one {
+.popular__data__icon__circle__red {
   background-color: var(--app-red);
 }
-#popular .two {
+.popular__data__icon__circle__blue {
   background-color: var(--app-blue);
 }
-#popular .three {
+.popular__data__icon__circle__green {
   background-color: var(--app-green);
 }
-#popular h2 {
-  font-family: Raleway;
-  font-size: 20px;
-  line-height: 25px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-bottom: 20px;
-}
-#popular h5 {
+.popular__data__number {
   font-family: Raleway;
   font-size: 20px;
   font-weight: 800;
@@ -256,7 +247,7 @@ footer #media {
   text-decoration-skip-ink: none;
   margin-bottom: 20px;
 }
-#popular p {
+.popular__data__description {
   font-family: Raleway;
   font-size: 17px;
   font-weight: 400;
@@ -267,15 +258,24 @@ footer #media {
   margin-bottom: 20px;
   color: var(--app-grey);
 }
+.popular__header {
+  font-family: Raleway;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 20px;
+}
 
 @media only screen and (min-width: 1000px) {
-  #popular {
+  .popular {
     padding: 0 15% 10% 15% !important;
     display: grid !important;
     grid-template: 3fr 3fr/1fr 1fr 1fr;
     column-gap: 25px;
   }
-  #popular h2 {
+  .popular__header {
     font-family: Raleway;
     font-size: 36px;
     font-weight: 400;
@@ -286,21 +286,15 @@ footer #media {
     grid-row: 1;
     grid-column: 1/span 3;
   }
-  #popular .data {
+  .popular__data {
     grid-row: 2;
   }
 }
-#benefits {
+.benefits {
   background-color: #F7F7F7;
   padding: 30px 0;
 }
-#benefits #red-frame {
-  width: 127px;
-  position: absolute;
-  padding: 0;
-  margin: -30px 0 0 120px;
-}
-#benefits article {
+.benefits__article {
   background-color: #fff;
   margin: 25px;
   border: 1px solid #E8E9ED;
@@ -308,22 +302,27 @@ footer #media {
   padding: 25px;
   text-align: start;
 }
-#benefits article .line {
-  margin-top: 25px;
-  height: 3px;
-  width: 75%;
-  display: none;
+.benefits__article__div__image {
+  position: relative;
+  width: 70%;
+  height: auto;
+  left: 15%;
+  margin-bottom: 20px;
 }
-#benefits article #first .line {
-  background-color: var(--app-red);
+.benefits__article__mac__red {
+  width: 127px;
+  position: absolute;
+  padding: 0;
+  margin: -30px 0 0 120px;
 }
-#benefits article #shop .line {
-  background-color: var(--app-blue);
+.benefits__article__phone__img {
+  position: relative;
+  width: 70%;
+  height: auto;
+  left: 15%;
+  margin-bottom: 20px;
 }
-#benefits article #green-div .line {
-  background-color: var(--app-green);
-}
-#benefits article #blue-circle {
+.benefits__article__phone__blue {
   background-color: var(--app-blue);
   border-radius: 100%;
   width: 131px;
@@ -331,14 +330,46 @@ footer #media {
   position: absolute;
   left: calc(50% - 65px);
 }
-#benefits article img {
-  position: relative;
-  width: 70%;
-  height: auto;
-  left: 15%;
-  margin-bottom: 20px;
+.benefits__article__trumpet {
+  margin: 0;
+  border: none;
+  background-color: #F7F7F7;
 }
-#benefits article h3 {
+.benefits__article__trumpet__green {
+  background-color: var(--app-green);
+  padding: 30px 30px 0 30px;
+  border-radius: 5px;
+  margin: 0;
+}
+.benefits__article__trumpet__green__img {
+  width: 100%;
+  margin: 0;
+  position: static;
+}
+.benefits__article__desc__line {
+  margin-top: 25px;
+  height: 3px;
+  width: 75%;
+  display: none;
+}
+.benefits__article__desc__line__red {
+  background-color: var(--app-red);
+}
+.benefits__article__desc__line__blue {
+  background-color: var(--app-blue);
+}
+.benefits__article__desc__line__blue {
+  background-color: var(--app-green);
+}
+.benefits__article__desc__trumpet {
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  padding: 25px;
+  text-align: start;
+}
+.benefits__article__desc__header {
   font-family: Raleway;
   font-size: 30px;
   font-weight: 400;
@@ -348,7 +379,7 @@ footer #media {
   text-decoration-skip-ink: none;
   margin-bottom: 20px;
 }
-#benefits article p {
+.benefits__article__desc__parragraph {
   font-family: Open Sans;
   font-size: 16px;
   font-weight: 400;
@@ -357,67 +388,46 @@ footer #media {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-#benefits #green-card {
-  margin: 0;
-  border: none;
-  background-color: #F7F7F7;
-}
-#benefits #green-card #green {
-  background-color: var(--app-green);
-  padding: 30px 30px 0 30px;
-  border-radius: 5px;
-  margin: 0;
-}
-#benefits #green-card #green img {
-  width: 100%;
-  margin: 0;
-  position: static;
-}
-#benefits #green-card #green-div {
-  margin: 0;
-  background-color: #fff;
-  border: 1px solid #E8E9ED;
-  border-radius: 5px;
-  padding: 25px;
-  text-align: start;
-}
 
 @media only screen and (min-width: 1000px) {
-  #benefits {
+  .benefits {
     display: grid !important;
     row-gap: 25px;
   }
-  #benefits article {
+  .benefits__article {
     margin: auto 15% !important;
     display: grid !important;
     grid-template-areas: "first second";
     grid-template-columns: 1fr 1fr;
   }
-  #benefits article .line {
+  .benefits__article__desc__line {
     display: block !important;
   }
-  #benefits #first, #benefits #phone, #benefits #green-div {
+  .benefits__article__phone, .benefits__article__desc__red, .benefits__articledesc__trumpet {
     grid-area: first;
   }
-  #benefits #mac, #benefits #shop, #benefits #green {
+  .benefits__article__red, .benefits__article__desc__phone, .benefits__articletrumpet {
     grid-area: second;
   }
-  #benefits #blue-circle {
+  .benefits__article__phone__blue {
     margin-top: 30px;
     left: 25% !important;
     transform: scale(1.5);
   }
-  #benefits #red-frame {
+  .benefits__article__mac {
+    text-align: center;
+  }
+  .benefits__article__mac__red {
     left: auto;
     content: url("../img/benefits-frame-desk.png");
     right: 22% !important;
     margin-top: 5px;
     transform: scale(1.2);
   }
-  #benefits #mac {
+  .benefits__article__mac__img {
     transform: scale(0.8);
   }
-  #benefits #green-card {
+  .benefits__article__trumpet {
     padding: 0;
     column-gap: 30px;
   }

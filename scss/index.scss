@@ -1,18 +1,18 @@
-@import 'header';
-@import 'main';
-@import 'footer';
+@use 'header';
+@use 'main';
+@use 'footer';
 
 //MAIN
-@import 'open';
-@import 'popular';
-@import 'benefits';
-@import 'pricing';
-@import 'contact';
+@use 'open';
+@use 'popular';
+@use 'benefits';
+@use 'pricing';
+@use 'contact';
 
 //GLOBAL
-@import 'global';
-@import 'modal';
-@import 'slider';
+@use 'global';
+@use 'modal';
+@use 'slider';
 :root{
     --app-blue: #08A6E4;
     --app-grey: #A5A5A5;

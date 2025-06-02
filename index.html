@@ -30,84 +30,84 @@
 
 </head>
 <body>
-    <header>
-        <div id="title"><h1 id="title">OXYGENShop</h1></div>
-        <nav>
-            <ion-icon name="menu-outline" id="nav-burguer"></ion-icon>
-            <ul>
-                <li><a href="#popular">WHY US?</a></li>
-                <li><a href="#benefits">BENEFITS</a></li>
-                <li><a href="#pricing">PRICES</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+    <header class="header">
+        <div class="header__div"><h1 class="header__div__title">OXYGENShop</h1></div>
+        <nav class="header__nav">
+            <ion-icon name="menu-outline" class="header__nav__burguer"></ion-icon>
+            <ul class="header__nav__list">
+                <li class="header__nav__list__item"><a class="header__nav__list__item__anchor" href="#popular">WHY US?</a></li>
+                <li class="header__nav__list__item"><a class="header__nav__list__item__anchor" href="#benefits">BENEFITS</a></li>
+                <li class="header__nav__list__item"><a class="header__nav__list__item__anchor" href="#pricing">PRICES</a></li>
+                <li class="header__nav__list__item"><a class="header__nav__list__item__anchor" href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="open">
-            <h2>Sell More!</h2>
-            <p>Open shop on our platform and increase your sales</p>
-            <button>Open your shop</button>
-            <img src="./img/bgi-open-section.png" alt="">
+        <section id="open" class="open">
+            <h2 class="open__header">Sell More!</h2>
+            <p class="open__parragraph">Open shop on our platform and increase your sales</p>
+            <button class="open__button">Open your shop</button>
+            <img class="open__background-image"src="./img/bgi-open-section.png" alt="">
         </section>
-        <section id="popular">
-            <h2>The most popular sales platform in country</h2>
-            <div class="data">
-                <div class="data-icon">
-                    <img src="./img/popular-person.png" alt="">
-                    <div class="circle one"></div>
+        <section id="popular" class="popular">
+            <h2 class="popular__header">The most popular sales platform in country</h2>
+            <div class="popular__data">
+                <div class="popular__data__icon">
+                    <img class="popular__data__icon__image" src="./img/popular-person.png" alt="">
+                    <div class="popular__data__icon__circle  popular__data__icon__circle__red"></div>
                 </div>
                 
-                <h5>100000+</h5>
-                <p>daily entries</p>
+                <h5 class="popular__data__number">100000+</h5>
+                <p class="popular__data__description">daily entries</p>
+            </div>
+            <div class="popular__data">
+                <div class="popular__data__icon">
+                    <img class="popular__data__icon__image popular__data__icon__image__eye"src="./img/popular-eye.png" alt="">
+                    <div class="popular__data__icon__circle popular__data__icon__circle__blue"></div>
+                </div>
+                <h5 class="popular__data__number">2000000+</h5>
+                <p class="popular__data__description">seen products every day</p>
             </div>
             <div class="data">
                 <div class="data-icon">
-                    <img src="./img/popular-eye.png" alt="" id="eye">
-                    <div class="circle two"></div>
+                    <img class="popular__data__icon__image" src="./img/popular-catalog.png" alt="">
+                    <div class="popular__data__icon__circle popular__data__icon__circle__green"></div>
                 </div>
-                <h5>2000000+</h5>
-                <p>seen products every day</p>
-            </div>
-            <div class="data">
-                <div class="data-icon">
-                    <img src="./img/popular-catalog.png" alt="">
-                    <div class="circle three"></div>
-                </div>
-                <h5>10000+</h5>
-                <p>added posts daily</p>
+                <h5 class="popular__data__number">10000+</h5>
+                <p class="popular__data__description">added posts daily</p>
             </div>
         </section>
-        <section id="benefits">
-            <article>
-                <div id="macimg">
-                    <img src="./img/benefits-frame.png" alt="" id="red-frame">
-                    <img src="./img/benefits-mac.png" alt="" id="mac">
+        <section class="benefits">
+            <article class="benefits__article">
+                <div class="benefits__article__mac benefits__article__div">
+                    <img src="./img/benefits-frame.png" alt=""  class="benefits__article__mac__red">
+                    <img src="./img/benefits-mac.png" alt=""  class="benefits__article__mac__img">
                 </div>
-                <div id="first">
-                    <h3>Be always first</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibuu</p>
-                    <div class="line"></div>
-                </div>
-            </article>
-            <article>
-                <div id="phone">
-                    <div id="blue-circle"></div>
-                    <img src="./img/benefits-phone.png" alt="">
-                </div>
-                <div id="shop">
-                    <h3>Your shop is where you are!</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibu</p>
-                    <div class="line"></div>
+                <div class="benefits__article__desc benefits__article__desc__red">
+                    <h3 class="benefits__article__desc__header">Be always first</h3>
+                    <p class="benefits__article__desc__parragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibuu</p>
+                    <div class="benefits__article__desc__line benefits__article__desc__line__red"></div>
                 </div>
             </article>
-            <article id="green-card">
-                <div id="green-div">
-                    <h3>Increase recognition your brand!</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibu</p>
-                    <div class="line"></div>
+            <article class="benefits__article">
+                <div class="benefits__article__phone benefits__article__div">
+                    <div class="benefits__article__phone__blue"></div>
+                    <img class="benefits__article__div__image benefits__article__div__img__phone" src="./img/benefits-phone.png" alt="">
                 </div>
-                <div id="green">
-                    <img src="./img/trumpet.png" alt="">
+                <div class="benefits__article__desc benefits__article__desc__blue">
+                    <h3 class="benefits__article__desc__header">Your shop is where you are!</h3>
+                    <p class="benefits__article__desc__parragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibu</p>
+                    <div class="benefits__article__desc__line benefits__article__desc__line__blue"></div>
+                </div>
+            </article>
+            <article  class="benefits__article benefits__article__trumpet">
+                <div class="benefits__article__desc benefits__article__desc__trumpet">
+                    <h3  class="benefits__article__desc__header">Increase recognition your brand!</h3>
+                    <p  class="benefits__article__desc__parragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum sunt molestias consequuntur quam, facere voluptatibu</p>
+                    <div class="benefits__article__desc__line benefits__article__desc__line__green"></div>
+                </div>
+                <div  class="benefits__article__trumpet__green benefits__article__div">
+                    <img class="benefits__article__trumpet__green__img" src="./img/trumpet.png" alt="">
                 </div>
             </article>
         </section>

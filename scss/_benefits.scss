@@ -2,19 +2,14 @@
 $circle-width: 131px;
 $frame-width: 127px;
 
-#benefits{
+.benefits{
     background-color: #F7F7F7;
 
     padding: 30px 0;
 
-    #red-frame{
-        width: $frame-width;
-        position: absolute;
-        padding: 0;
-        margin: -30px 0 0 120px;
-    }
     
-    article{
+    
+    &__article{
         background-color: #fff;
         margin: 25px;
         border: 1px solid #E8E9ED;
@@ -22,150 +17,183 @@ $frame-width: 127px;
         padding: 25px;
         text-align: start;
 
-        .line{
-            margin-top: 25px;
-            height: 3px;
-            width: 75%;
-            display: none;
-        }
+        &__div{
+            &__image{
+                position: relative;
+                width: 70%;
+                height:auto;
+                left: 15%;
+                margin-bottom: 20px;
 
-        #first{
-            .line{
-                background-color: var(--app-red);
+                
             }
         }
-        #shop{
-            .line{
+
+        &__mac{
+            &__red{
+                width: $frame-width;
+                position: absolute;
+                padding: 0;
+                margin: -30px 0 0 120px;
+            }
+        }
+
+        &__phone{
+
+            &__img{
+                position: relative;
+                width: 70%;
+                height:auto;
+                left: 15%;
+                margin-bottom: 20px;
+            }
+
+            &__blue{
                 background-color: var(--app-blue);
+                border-radius: 100%;
+                width: $circle-width;
+                height: $circle-width;
+                position: absolute;
+                left: calc(50% - 65px);
             }
         }
-        #green-div{
-            .line{
+
+        &__trumpet{
+
+            margin: 0;
+            border: none;
+            background-color: #F7F7F7;
+
+
+            &__green{
                 background-color: var(--app-green);
-            }
-        }
-        
-
-        #blue-circle{
-            background-color: var(--app-blue);
-            border-radius: 100%;
-            width: $circle-width;
-            height: $circle-width;
-            position: absolute;
-            left: calc(50% - 65px);
-        }
-
-        img{
-            position: relative;
-            width: 70%;
-            height:auto;
-            left: 15%;
-            margin-bottom: 20px;
-        }
-
-        h3{
-            font-family: Raleway;
-            font-size: 30px;
-            font-weight: 400;
-            line-height: 35.22px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            margin-bottom: 20px;
-        }
-
-        p{
-            font-family: Open Sans;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 21px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-
-        }
-
-        
-
-    }
-
-    #green-card{
-        margin: 0;
-        border: none;
-        background-color: #F7F7F7;
-        
-
-        #green{
-            background-color: var(--app-green);
-            padding: 30px 30px 0 30px;
-            border-radius: 5px;
-            margin: 0;
-            
-            img{
-                width: 100%;
+                padding: 30px 30px 0 30px;
+                border-radius: 5px;
                 margin: 0;
-                position: static;
+                
+                &__img{
+                    width: 100%;
+                    margin: 0;
+                    position: static;
+                }
+            }
+
+        }
+
+        &__desc{
+            &__line{
+                margin-top: 25px;
+                height: 3px;
+                width: 75%;
+                display: none;
+
+                &__red{
+                    background-color: var(--app-red);
+                }
+
+                &__blue{
+                    background-color: var(--app-blue);
+                }
+
+                &__blue{
+                    background-color: var(--app-green);
+                }
+            }
+
+            &__trumpet{
+                margin: 0;
+                background-color: #fff;
+                border: 1px solid #E8E9ED;
+                border-radius: 5px;
+                padding: 25px;
+                text-align: start;
+            }
+
+            &__header{
+                font-family: Raleway;
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 35.22px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                margin-bottom: 20px;
+            }
+
+            &__parragraph{
+                font-family: Open Sans;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
             }
         }
 
-        #green-div{
-            margin: 0;
-            background-color: #fff;
-            border: 1px solid #E8E9ED;
-            border-radius: 5px;
-            padding: 25px;
-            text-align: start;
-        }
     }
-
 
 
 }
 
 @media only screen and (min-width: 1000px){
-    #benefits{
+    .benefits{
         display: grid !important;
         row-gap: 25px;
 
-        article{
+        &__article{
             margin: auto 15% !important;
             display: grid !important;
             grid-template-areas: "first second";
             grid-template-columns: 1fr 1fr;
 
-            .line{
-                display: block !important;
+            &__desc{
+                &__line{
+                    display: block !important;
+                }
             }
-        }
+            &__phone , &__desc__red, &desc__trumpet{
+                grid-area: first;
+            }
+            
+            &__red,&__desc__phone,&trumpet{
+                grid-area: second;
+            }
 
-        #first,#phone,#green-div{
-            grid-area: first;
-        }
+            &__phone{
+                
 
-        #mac,#shop,#green{
-            grid-area: second;
-        }
+                &__blue{
+                    margin-top: 30px;
+                    left: 25%!important;
+                    transform: scale(1.5);
+                }
+            }
 
-        #blue-circle{
-            margin-top: 30px;
-            left: 25%!important;
-            transform: scale(1.5);
-        }
 
-        #red-frame{
-            left: auto;
-            content: url("../img/benefits-frame-desk.png");
-            right: 22% !important;
-            margin-top: 5px;
-            transform: scale(1.2);
-        }
-        #mac{
-            transform: scale(0.8);
-        }
+            &__mac{
 
-        #green-card{
-            padding: 0;
-            column-gap: 30px;
+                text-align: center;
+
+                &__red{
+                    left: auto;
+                    content: url("../img/benefits-frame-desk.png");
+                    right: 22% !important;
+                    margin-top: 5px;
+                    transform: scale(1.2);
+                }
+                &__img{
+                    transform: scale(0.8);
+                }
+            }
+
+            &__trumpet{
+                padding: 0;
+                column-gap: 30px;
+            }
+
+
+            
         }
 
     }

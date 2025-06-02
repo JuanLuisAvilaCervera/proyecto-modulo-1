@@ -1,5 +1,3 @@
-
-
 function toggleNav(){
     const header = document.querySelector('header');
     const ul = header.querySelector('ul');

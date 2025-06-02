@@ -71,13 +71,6 @@ class Slider{
         }
 
         this.changeActive(currentID, nextID);
-
-        // if(nextID > currentID){
-        //     this.moveLeft(currentID , nextID);
-        // }else{
-        //     this.moveRight(currentID , nextID);
-        // }
-
         this.restartTimeout();
 
     }
